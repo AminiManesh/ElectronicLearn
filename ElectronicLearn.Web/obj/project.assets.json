@@ -14922,11 +14922,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\ElectronicLearn.Web.csproj",
+      "projectUniqueName": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\ElectronicLearn.Web.csproj",
       "projectName": "ElectronicLearn.Web",
-      "projectPath": "f:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\ElectronicLearn.Web.csproj",
+      "projectPath": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\ElectronicLearn.Web.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "f:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\obj\\",
+      "outputPath": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -14948,11 +14948,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "f:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\ElectronicLearn.Core.csproj": {
-              "projectPath": "f:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\ElectronicLearn.Core.csproj"
+            "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\ElectronicLearn.Core.csproj": {
+              "projectPath": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\ElectronicLearn.Core.csproj"
             },
-            "f:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj": {
-              "projectPath": "f:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj"
+            "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj": {
+              "projectPath": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj"
             }
           }
         }

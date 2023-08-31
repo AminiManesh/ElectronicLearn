@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6INBmfej3ktdEQ/66SIJoB04mrcboaJpqiCPCWgcpCSU5RwTfk1xrtZpf+TNmyD+lnyzKDAzRVgLMTjkWcU4Ow==",
+  "dgSpecHash": "CP7kmpWth5QQK4+Gs0m0dm9SC310tp6dLQOBN2ArldN7bR0iPVlYnxPw7fxxBTrlB7Rf90TFM1lEQJCDVZosgQ==",
   "success": true,
-  "projectFilePath": "f:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\ElectronicLearn.Core.csproj",
+  "projectFilePath": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\ElectronicLearn.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
