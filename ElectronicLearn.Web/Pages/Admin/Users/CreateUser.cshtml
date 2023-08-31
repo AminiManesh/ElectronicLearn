@@ -1,0 +1,86 @@
+﻿@page
+@using ElectronicLearn.DataLayer.Entities.User;
+@model ElectronicLearn.Web.Pages.Admin.Users.CreateUserModel
+@{
+    ViewData["Title"] = "افزودن کاربر جدید";
+    var Roles = ViewData["Roles"] as List<Role>;
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col col-12 col-md-6 col-lg-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    اطلاعات کاربر
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" asp-for="AdminAddUserViewModel.UserName" placeholder="نام کاربری">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" asp-for="AdminAddUserViewModel.Email" placeholder="ایمیل">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" asp-for="AdminAddUserViewModel.Password" placeholder="کلمه عبور">
+                    </div>
+                    <div class="form-group">
+                        <label class="fw-bold">وضعیت</label>
+                        <div class="checkbox" style="margin: 0 8px;">
+                            <label>
+                                <input asp-for="AdminAddUserViewModel.IsActive" type="checkbox"> فعال
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-12 col-md-8 col-lg-6">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    دسترسی ها
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        @foreach (var role in Roles)
+                                        {
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="@role.RoleId" name="SelectedRoles"> @role.RoleTitle
+                                                </label>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-12 col-md-6 col-lg-4">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    تصویر پروفایل کاربر
+                </div>
+                <div class="panel-body">
+                    <img id="userImage" class="thumbnail" src="/img/UserAvatars/avatar.jpg" style="margin: 0 auto;" />
+                    <div class="form-group">
+                        <label>انتخاب تصویر</label>
+                        <input asp-for="AdminAddUserViewModel.Avatar" type="file">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg btn-block">افزودن کاربر</button>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <script>
+        AdminAddUserViewModel_Avatar.onchange = evt => {
+            const [file] = AdminAddUserViewModel_Avatar.files
+            if (file) {
+                userImage.src = URL.createObjectURL(file)
+            }
+        }
+    </script>
+}

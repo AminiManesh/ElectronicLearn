@@ -1,0 +1,35 @@
+﻿@using ElectronicLearn.Core.Convertors;
+@using ElectronicLearn.Core.Services.Interfaces;
+@using System.Security.Claims;
+@inject IUserService _userService
+
+@{
+    var user = _userService.GetUserPanelSidebarInformation(int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString()));
+}
+
+<aside>
+    <div class="avatar-layer">
+        <div class="img-layer">
+            <a asp-area="UserPanel" asp-controller="Home" asp-action="EditProfile" class="change-image"><i class="zmdi zmdi-edit"></i></a>
+            <img src="/img/UserAvatars/@user.ImageName">
+        </div>
+        <div class="detail">
+            <span> @user.UserName </span>
+            <span> عضویت : @user.RegisterDate.ToShamsi() </span>
+        </div>
+    </div>
+
+    <section>
+        <header><h3> میز کار </h3></header>
+        <div class="inner">
+            <ul>
+                <li><a asp-area="UserPanel" asp-controller="Home" asp-action="Index"> مشاهده حساب کاربری </a></li>
+                <li><a asp-area="UserPanel" asp-controller="Wallet" asp-action="Index"> کیف پول شما </a></li>
+                <li><a asp-route="EditProfile"> ویرایش حساب کاربری </a></li>
+                <li><a asp-action="ChangePassword" asp-controller="Home" asp-area="UserPanel"> تغییر رمز عبور </a></li>
+                <li><a href=""> تنظیمات حساب کاربری </a></li>
+                <li><a asp-route="Logout"> خروج از حساب کاربری </a></li>
+            </ul>
+        </div>
+    </section>
+</aside>

@@ -1,0 +1,75 @@
+﻿@using System.Security.Claims;
+@using ElectronicLearn.Core.Convertors;
+@model ElectronicLearn.Core.DTOs.ChargeWalletViewModel
+@inject ElectronicLearn.Core.Services.Interfaces.IWalletService _walletService
+@{
+    ViewData["Title"] = "کیف پول شما";
+    var TransactionList = _walletService.GetAllTransactions(int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString()));
+}
+
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" asp-area="">الکترونیک لرن</a></li>
+        <li class="breadcrumb-item active" aria-current="page">کیف پول شما</li>
+    </ul>
+</nav>
+
+<div class="user-account">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <partial name="_UserPanelSidebarPartial" />
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+            <section class="user-account-content">
+                <header><h1> کیف پول شما </h1></header>
+                <div class="inner">
+                    <form asp-action="Index" method="post">
+                        <div class="text-danger mb-4" asp-validation-summary="All"></div>
+                        <div class="row">
+                            <div class="col-md-7 col-sm-8 col-xs-12">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="amount"><i class="zmdi zmdi-money"></i></span>
+                                    <input asp-for="Amount" type="number" class="form-control" placeholder="مبلغ شارژ" aria-describedby="amount" dir="rtl" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-7 col-sm-8 col-xs-12 mt-2">
+                                <button class="btn btn-success"> شارژ کیف پول </button>
+                            </div>
+                        </div>
+                    </form>
+                    <table class="table table-hover table-bordered table-striped mt-4">
+                        <thead class="table-success">
+                            <tr>
+                                <td>مبلغ</td>
+                                <td>نوع تراکنش</td>
+                                <td>تاریخ و ساعت</td>
+                                <td>توضیحات</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var transaction in TransactionList)
+                            {
+                                <tr>
+                                    <td>@transaction.Amount.ToString("#,0 تومان")</td>
+                                    <td>
+                                        @if (transaction.TransactionType == 1)
+                                        {
+                                            <span class="text-success fw-bold">واریز</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-danger fw-bold">برداشت</span>
+                                        }
+                                    </td>
+                                    <td dir="rtl">@transaction.DateTime.ToLongShamsi()</td>
+                                    <td>@transaction.Description</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

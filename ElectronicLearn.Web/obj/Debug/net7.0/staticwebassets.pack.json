@@ -1,0 +1,697 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\2fc41673fe2f4f448b339a8eba3574e4.mp4",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\2fc41673fe2f4f448b339a8eba3574e4.mp4"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\efc3492f610444239b512b72d1b14e9a.mp4",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\efc3492f610444239b512b72d1b14e9a.mp4"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\92287f46e6ee4530aa5483bf5e0b3159.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\92287f46e6ee4530aa5483bf5e0b3159.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\9ecfe27cffe2405c849f0e10bf23cf85.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\9ecfe27cffe2405c849f0e10bf23cf85.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\no-image.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\no-image.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\92287f46e6ee4530aa5483bf5e0b3159.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\92287f46e6ee4530aa5483bf5e0b3159.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\9ecfe27cffe2405c849f0e10bf23cf85.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\9ecfe27cffe2405c849f0e10bf23cf85.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\no-image.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\no-image.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\css\\bootstrap-rtl.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\bootstrap-rtl.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\css\\plugins\\dataTables\\dataTables.bootstrap.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\plugins\\dataTables\\dataTables.bootstrap.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\css\\plugins\\morris\\morris-0.4.3.min.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\plugins\\morris\\morris-0.4.3.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\css\\plugins\\social-buttons\\social-buttons.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\plugins\\social-buttons\\social-buttons.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\css\\plugins\\timeline\\timeline.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\plugins\\timeline\\timeline.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\css\\sb-admin.css",
+      "PackagePath": "staticwebassets\\admin-assets\\css\\sb-admin.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\css\\font-awesome.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\bordered-pulled.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\bordered-pulled.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\core.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\core.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\fixed-width.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\fixed-width.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\font-awesome.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\font-awesome.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\icons.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\icons.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\larger.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\larger.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\list.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\list.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\mixins.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\mixins.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\path.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\path.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\rotated-flipped.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\rotated-flipped.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\spinning.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\spinning.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\stacked.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\stacked.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\less\\variables.less",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\less\\variables.less"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_bordered-pulled.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_bordered-pulled.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_core.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_core.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_fixed-width.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_fixed-width.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_icons.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_icons.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_larger.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_larger.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_list.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_list.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_path.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_path.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_rotated-flipped.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_rotated-flipped.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_spinning.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_spinning.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_stacked.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_stacked.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\_variables.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\font-awesome\\scss\\font-awesome.scss",
+      "PackagePath": "staticwebassets\\admin-assets\\font-awesome\\scss\\font-awesome.scss"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\admin-assets\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\admin-assets\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\admin-assets\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\admin-assets\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\demo\\dashboard-demo.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\demo\\dashboard-demo.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\demo\\flot-demo.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\demo\\flot-demo.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\demo\\morris-demo.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\demo\\morris-demo.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\jquery-1.10.2.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\jquery-1.10.2.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\plugins\\dataTables\\dataTables.bootstrap.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\plugins\\dataTables\\dataTables.bootstrap.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\plugins\\dataTables\\jquery.dataTables.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\plugins\\dataTables\\jquery.dataTables.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\plugins\\flot\\excanvas.min.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\plugins\\flot\\excanvas.min.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\plugins\\flot\\jquery.flot.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\plugins\\flot\\jquery.flot.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\plugins\\flot\\jquery.flot.pie.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\plugins\\flot\\jquery.flot.pie.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\plugins\\flot\\jquery.flot.resize.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\plugins\\flot\\jquery.flot.resize.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\plugins\\flot\\jquery.flot.tooltip.min.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\plugins\\flot\\jquery.flot.tooltip.min.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\plugins\\metisMenu\\jquery.metisMenu.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\plugins\\metisMenu\\jquery.metisMenu.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\plugins\\morris\\morris.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\plugins\\morris\\morris.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\plugins\\morris\\raphael-2.1.0.min.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\plugins\\morris\\raphael-2.1.0.min.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\admin-assets\\js\\sb-admin.js",
+      "PackagePath": "staticwebassets\\admin-assets\\js\\sb-admin.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\css\\material-design-iconic-font.min.css",
+      "PackagePath": "staticwebassets\\css\\material-design-iconic-font.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\BYekan-webfont.eot",
+      "PackagePath": "staticwebassets\\font\\BYekan-webfont.eot"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\BYekan-webfont.ttf",
+      "PackagePath": "staticwebassets\\font\\BYekan-webfont.ttf"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\BYekan-webfont.woff",
+      "PackagePath": "staticwebassets\\font\\BYekan-webfont.woff"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\IRANSans\\IRANSansWeb.woff",
+      "PackagePath": "staticwebassets\\font\\IRANSans\\IRANSansWeb.woff"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\IRANSans\\IRANSansWeb_Bold.woff",
+      "PackagePath": "staticwebassets\\font\\IRANSans\\IRANSansWeb_Bold.woff"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\IRANSans\\IRANSansWeb_Light.woff",
+      "PackagePath": "staticwebassets\\font\\IRANSans\\IRANSansWeb_Light.woff"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\IRANSans\\IRANSansWeb_Medium.woff",
+      "PackagePath": "staticwebassets\\font\\IRANSans\\IRANSansWeb_Medium.woff"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\IRANSans\\IRANSansWeb_UltraLight.woff",
+      "PackagePath": "staticwebassets\\font\\IRANSans\\IRANSansWeb_UltraLight.woff"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\Material-Design-Iconic-Font.eot",
+      "PackagePath": "staticwebassets\\font\\Material-Design-Iconic-Font.eot"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\Material-Design-Iconic-Font.svg",
+      "PackagePath": "staticwebassets\\font\\Material-Design-Iconic-Font.svg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\Material-Design-Iconic-Font.ttf",
+      "PackagePath": "staticwebassets\\font\\Material-Design-Iconic-Font.ttf"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\Material-Design-Iconic-Font.woff",
+      "PackagePath": "staticwebassets\\font\\Material-Design-Iconic-Font.woff"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\font\\Material-Design-Iconic-Font.woff2",
+      "PackagePath": "staticwebassets\\font\\Material-Design-Iconic-Font.woff2"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\0790fb8d1f3c4f6bbebcd040a693c981.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\0790fb8d1f3c4f6bbebcd040a693c981.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\0b283abd76e84e8a91493177533b0f28.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\0b283abd76e84e8a91493177533b0f28.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\19b84f42cab148c3aa13ca9286c5119d.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\19b84f42cab148c3aa13ca9286c5119d.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\1e602294b22a46e28fe655a59b2bd96b.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\1e602294b22a46e28fe655a59b2bd96b.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\31c977bc29f14e079f0a7f228f3b0ca0.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\31c977bc29f14e079f0a7f228f3b0ca0.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\6b0da0ef34f14b90af4e329dd1cd24e6.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\6b0da0ef34f14b90af4e329dd1cd24e6.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\a3bcac6d09ea481eb8038ad1b9d81d9e.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\a3bcac6d09ea481eb8038ad1b9d81d9e.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\a8024ab7dde3416c9432256042a8854f.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\a8024ab7dde3416c9432256042a8854f.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\a89af9c49db14723b2cdb2a420915eaa.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\a89af9c49db14723b2cdb2a420915eaa.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\avatar.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\avatar.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\c5bb594d1c6c41b79e5c7104f758a48c.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\c5bb594d1c6c41b79e5c7104f758a48c.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\e57e086db2424815a7ce2417af23aa09.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\e57e086db2424815a7ce2417af23aa09.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\fe4f19c0b4914d7491c7ffce7376bff0.jpg",
+      "PackagePath": "staticwebassets\\img\\UserAvatars\\fe4f19c0b4914d7491c7ffce7376bff0.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pattern.png",
+      "PackagePath": "staticwebassets\\img\\pattern.png"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pic\\1.jpg",
+      "PackagePath": "staticwebassets\\img\\pic\\1.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pic\\2.jpg",
+      "PackagePath": "staticwebassets\\img\\pic\\2.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pic\\3.jpg",
+      "PackagePath": "staticwebassets\\img\\pic\\3.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pic\\4.jpg",
+      "PackagePath": "staticwebassets\\img\\pic\\4.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pic\\5.jpg",
+      "PackagePath": "staticwebassets\\img\\pic\\5.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pic\\6.jpg",
+      "PackagePath": "staticwebassets\\img\\pic\\6.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pic\\7.jpg",
+      "PackagePath": "staticwebassets\\img\\pic\\7.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pic\\8.jpg",
+      "PackagePath": "staticwebassets\\img\\pic\\8.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pic\\big-thumb.jpg",
+      "PackagePath": "staticwebassets\\img\\pic\\big-thumb.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pic\\namad-1.png",
+      "PackagePath": "staticwebassets\\img\\pic\\namad-1.png"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\pic\\namad.png",
+      "PackagePath": "staticwebassets\\img\\pic\\namad.png"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\slide.jpg",
+      "PackagePath": "staticwebassets\\img\\slide.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\js\\Config.js",
+      "PackagePath": "staticwebassets\\js\\Config.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\js\\modernizr-custom.js",
+      "PackagePath": "staticwebassets\\js\\modernizr-custom.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\js\\persianumber.min.js",
+      "PackagePath": "staticwebassets\\js\\persianumber.min.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap-icons\\font\\bootstrap-icons.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\font\\bootstrap-icons.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap-icons\\font\\bootstrap-icons.json",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\font\\bootstrap-icons.json"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap-icons\\font\\bootstrap-icons.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\font\\bootstrap-icons.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap-icons\\font\\fonts\\bootstrap-icons.woff",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\font\\fonts\\bootstrap-icons.woff"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap-icons\\font\\fonts\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\lib\\bootstrap-icons\\font\\fonts\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.min.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery\\jquery.slim.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.min.js"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ElectronicLearn.Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ElectronicLearn.Web.props",
+      "PackagePath": "build\\ElectronicLearn.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ElectronicLearn.Web.props",
+      "PackagePath": "buildMultiTargeting\\ElectronicLearn.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ElectronicLearn.Web.props",
+      "PackagePath": "buildTransitive\\ElectronicLearn.Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

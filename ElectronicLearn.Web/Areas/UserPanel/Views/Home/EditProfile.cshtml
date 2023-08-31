@@ -1,0 +1,66 @@
+﻿@model ElectronicLearn.Core.DTOs.EditProfileViewModel
+
+@{
+    ViewData["Title"] = "ویرایش حساب کاربری";
+}
+
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" asp-area="">الکترونیک لرن</a></li>
+        <li class="breadcrumb-item active" aria-current="page">ویرایش حساب کاربری</li>
+    </ul>
+</nav>
+
+<div class="user-account">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <partial name="_UserPanelSidebarPartial" />
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+            <section class="user-account-content">
+                <header><h1> ویرایش حساب کاربری </h1></header>
+                <div class="inner form-layer">
+                    <form asp-action="EditProfile" method="post" enctype="multipart/form-data">
+
+                        @if (ViewBag.IsSuccess == true)
+                        {
+                            <div class="alert alert-success">
+                                پروفایل شما با موفقیت ویرایش شد.
+                            </div>
+                        }
+
+                        <div class="text-danger mb-4" asp-validation-summary="All"></div>
+
+                        <input asp-for="AvatarName" type="hidden" />
+                        <div class="row">
+                            <div class="col-md-7 col-sm-8 col-xs-12">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="email-address"><i class="zmdi zmdi-email"></i></span>
+                                    <input asp-for="Email" type="text" class="form-control" placeholder="ایمیل" aria-describedby="email-address">
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-sm-8 col-xs-12">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="username"><i class="zmdi zmdi-account"></i></span>
+                                    <input asp-for="UserName" type="text" class="form-control" placeholder="نام کاربری" aria-describedby="username">
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-sm-8 col-xs-12 mb-3">
+                                <div class="input-group mb-0">
+                                    <span class="input-group-text" id="avatar"><i class="zmdi zmdi-image"></i></span>
+                                    <input asp-for="Avatar" class="form-control" aria-describedby="avatar">
+                                </div>
+                                <p class="mb-1">لطفا فقط تصویر انتخاب کنید.</p>
+                                <img class="current-avatar img-thumbnail border border-1 border-dark" src="/img/UserAvatars/@Model.AvatarName" />
+                            </div>
+
+                            <div class="col-md-7 col-sm-8 col-xs-12">
+                                <button class="btn btn-success"> ویرایش اطلاعات </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

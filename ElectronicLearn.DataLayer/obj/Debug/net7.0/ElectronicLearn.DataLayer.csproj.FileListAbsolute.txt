@@ -1,0 +1,14 @@
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\bin\Debug\net7.0\ElectronicLearn.DataLayer.deps.json
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\bin\Debug\net7.0\ElectronicLearn.DataLayer.runtimeconfig.json
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\bin\Debug\net7.0\ElectronicLearn.DataLayer.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\bin\Debug\net7.0\ElectronicLearn.DataLayer.pdb
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\obj\Debug\net7.0\ElectronicLearn.DataLayer.csproj.AssemblyReference.cache
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\obj\Debug\net7.0\ElectronicLearn.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\obj\Debug\net7.0\ElectronicLearn.DataLayer.AssemblyInfoInputs.cache
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\obj\Debug\net7.0\ElectronicLearn.DataLayer.AssemblyInfo.cs
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\obj\Debug\net7.0\ElectronicLearn.DataLayer.csproj.CoreCompileInputs.cache
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\obj\Debug\net7.0\ElectronicLearn.DataLayer.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\obj\Debug\net7.0\refint\ElectronicLearn.DataLayer.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\obj\Debug\net7.0\ElectronicLearn.DataLayer.pdb
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\obj\Debug\net7.0\ElectronicLearn.DataLayer.genruntimeconfig.cache
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.DataLayer\obj\Debug\net7.0\ref\ElectronicLearn.DataLayer.dll

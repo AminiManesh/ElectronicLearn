@@ -1,0 +1,71 @@
+﻿@using System.Security.Claims;
+<!DOCTYPE html>
+<html class="no-js" dir="rtl" lang="fa-IR">
+<head>
+    <partial name="_MetaTags" />
+    <title>الکترونیک لرن | @ViewData["Title"]</title>
+    <partial name="_Styles" />
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+<body>
+    <script src="/js/modernizr-custom.js"></script>
+
+    <div class="landing-layer">
+        <div class="layer"></div>
+        <div class="container">
+            <nav>
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <ul>
+                            <li>
+                                <a class="fw-bold fs-6" asp-action="Index" asp-controller="Home" asp-area="">الکترونیک لرن</a>
+                                <a href=""> همکاری در فروش </a>
+                                <a href=""> درباره ما </a>
+                                <a href=""> تماس با ما </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="clientarea">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <div class="loggein">
+                                    <i class="zmdi zmdi-account"></i><a asp-area="UserPanel" asp-action="Index" asp-controller="Home"> @User.Identity.Name ، خوش آمدی </a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="signin">
+                                    <i class="zmdi zmdi-account"></i>
+                                    <a asp-route="Login"> ورود </a> /
+                                    <a asp-route="Register"> عضویت </a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            @RenderSection("Landing", required: false)
+        </div>
+    </div>
+
+    <!-- main manu -->
+    @await Component.InvokeAsync("CourseGroupsComponent");
+    <!-- /main manu -->
+    <!-- content -->
+    <main>
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+    <!-- /content -->
+    <!-- footer -->
+    <partial name="_Footer" />
+    <!-- /footer -->
+
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/persianumber.min.js"></script>
+    <script src="/js/script.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

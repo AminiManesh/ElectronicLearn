@@ -1,0 +1,32 @@
+﻿@page
+@model ElectronicLearn.Web.Pages.Admin.Roles.DeleteRoleModel
+@{
+    ViewData["Title"] = "حذف نقش";
+}
+
+
+<div class="panel panel-danger">
+    <div class="panel-heading">حذف نقش</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col col-12 col-md-6 col-lg-8">
+                <div>
+                    <label>نام نقش: </label>
+                    <span>@Model.Role.RoleTitle</span>
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col col-sm-6">
+                        <a href="/Admin/Users" class="btn btn-default btn-large btn-block">بازگشت</a>
+                    </div>
+                    <div class="col col-sm-6">
+                        <form method="post">
+                            <input type="hidden" asp-for="Role.RoleId" />
+                            <input type="hidden" asp-for="Role.RoleTitle" />
+                            <button type="submit" class="btn btn-danger btn-large btn-block">حذف</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

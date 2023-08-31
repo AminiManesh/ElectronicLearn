@@ -1,0 +1,19 @@
+﻿@model ElectronicLearn.DataLayer.Entities.User.User
+@{
+    ViewData["Title"] = "نتیجه ثبت نام";
+}
+
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" asp-area="">الکترونیک لرن</a></li>
+        <li class="breadcrumb-item active" aria-current="page">نتیجه ثبت نام</li>
+    </ul>
+</nav>
+
+<div class="container-content">
+    <div class="alert alert-success">
+        <h2>@Model.UserName عزیز !</h2>
+        <p>ثبت‌نام شما با موفقیت انجام شد، ایمیلی حاوی لینک فعال‌سازی حساب کاربری شما به ایمیل @Model.Email ارسال شد.</p>
+        <p>جهت ادامه ثبت‌نام وارد ایمیل خود شوید و روی لینک کلیک کنید.</p>
+    </div>
+</div>

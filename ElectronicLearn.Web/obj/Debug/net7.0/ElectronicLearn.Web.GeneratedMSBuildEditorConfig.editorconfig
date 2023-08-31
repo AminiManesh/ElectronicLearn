@@ -1,0 +1,193 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ElectronicLearn.Web
+build_property.RootNamespace = ElectronicLearn.Web
+build_property.ProjectDir = F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Areas/UserPanel/Views/Home/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXEhvbWVcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Areas/UserPanel/Views/Home/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXEhvbWVcRWRpdFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Areas/UserPanel/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Areas/UserPanel/Views/Shared/_UserPanelSidebarPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXFNoYXJlZFxfVXNlclBhbmVsU2lkZWJhclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Areas/UserPanel/Views/Wallet/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXFdhbGxldFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Areas/UserPanel/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Areas/UserPanel/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Courses/CreateCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xDcmVhdGVDb3Vyc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Courses/CreateEpisode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xDcmVhdGVFcGlzb2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Courses/EditCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xFZGl0Q291cnNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Courses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Courses/IndexEpisode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xJbmRleEVwaXNvZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Roles/CreateRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9sZXNcQ3JlYXRlUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Roles/DeleteRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9sZXNcRGVsZXRlUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Roles/EditRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9sZXNcRWRpdFJvbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Users/CreateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcQ3JlYXRlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Users/DeletedUsersList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcRGVsZXRlZFVzZXJzTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Users/DeleteUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcRGVsZXRlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Users/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Account/ActiveAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY3RpdmVBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Account/ForgotPasswordSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZFN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Account/RegisterSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlclN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Home/ChargeWallet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGFyZ2VXYWxsZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Shared/ActivationEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFjdGl2YXRpb25FbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Shared/Components/CourseGroupsComponent/CourseGroups.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ291cnNlR3JvdXBzQ29tcG9uZW50XENvdXJzZUdyb3Vwcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Shared/ResetPasswordEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJlc2V0UGFzc3dvcmRFbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Shared/_MetaTags.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZXRhVGFncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Shared/_Styles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdHlsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

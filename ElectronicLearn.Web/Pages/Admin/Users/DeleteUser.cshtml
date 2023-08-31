@@ -1,0 +1,57 @@
+﻿@page
+@using ElectronicLearn.Core.Services.Interfaces;
+@model ElectronicLearn.Web.Pages.Admin.Users.DeleteUserModel
+@inject IWalletService _walletService;
+@{
+    ViewData["Title"] = "حذف کاربر";
+}
+
+
+<div class="panel panel-danger">
+    <div class="panel-heading">حذف کاربر</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col col-12 col-md-6 col-lg-4">
+                <img class="thumbnail" src="/img/UserAvatars/@Model.AdminDeleteUserViewModel.ImageName" />
+            </div>
+            <div class="col col-12 col-md-6 col-lg-8">
+                <div>
+                    <label>نام کاربری: </label>
+                    <span>@Model.AdminDeleteUserViewModel.UserName</span>
+                </div>
+                <div>
+                    <label>ایمیل: </label>
+                    <span>@Model.AdminDeleteUserViewModel.Email</span>
+                </div>
+                <div>
+                    <label>موجودی کیف پول: </label>
+                    <span>@_walletService.GetUserBalance(Model.AdminDeleteUserViewModel.UserId).ToString("#,0 تومان")</span>
+                </div>
+                <div>
+                    <label>وضعیت: </label>
+                    <span>
+                        @if (Model.AdminDeleteUserViewModel.IsActive)
+                        {
+                            <strong class="text-success">فعال</strong>
+                        }
+                        else
+                        {
+                            <strong class="text-success">غیر فعال</strong>
+                        }
+                    </span>
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col col-sm-6">
+                        <a href="/Admin/Users" class="btn btn-default btn-large btn-block">بازگشت</a>
+                    </div>
+                    <div class="col col-sm-6">
+                        <form method="post">
+                            <input type="hidden" asp-for="AdminDeleteUserViewModel.UserId"/>
+                            <button type="submit" class="btn btn-danger btn-large btn-block">حذف</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
