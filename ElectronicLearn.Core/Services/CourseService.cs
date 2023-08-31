@@ -60,6 +60,8 @@ namespace ElectronicLearn.Core.Services
             CourseEpisode.CourseId = episode.CourseId;
             CourseEpisode.CourseEpisodeTitle = episode.CourseEpisodeTitle;
             CourseEpisode.IsFree = episode.IsFree;
+            CourseEpisode.EpisodeTime = episode.EpisodeTime;
+
             if (episode.EpisodeFile != null)
             {
                 var courseEpisodesPath = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/Courses/Episodes/{episode.CourseId}/");
@@ -68,9 +70,10 @@ namespace ElectronicLearn.Core.Services
                     Directory.CreateDirectory(courseEpisodesPath);
                 }
                 CourseEpisode.EpisodeFileName = FileTools.SaveFile(episode.EpisodeFile, $"wwwroot/Courses/Episodes/{episode.CourseId}/");
-
-                // todo 
             }
+
+            _context.Add(CourseEpisode);
+            _context.SaveChanges();
         }
 
         public List<CourseGroup> GetAllCourseGroups()
