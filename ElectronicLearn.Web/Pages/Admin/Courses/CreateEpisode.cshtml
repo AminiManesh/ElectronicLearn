@@ -1,0 +1,43 @@
+﻿@page
+@model ElectronicLearn.Web.Pages.Admin.Courses.CreateEpisodeModel
+@{
+}
+
+@{
+    ViewData["Title"] = "افزودن بخش جدید";
+}
+
+
+<form method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col col-12 col-md-6 col-lg-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    اطلاعات بخش
+                </div>
+                <div class="panel-body">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <input type="hidden" asp-for="AdminEpisodeViewModel.CourseId" />
+
+                    <div class="form-group">
+                        <label>عنوان بخش</label>
+                        <input type="text" class="form-control" asp-for="AdminEpisodeViewModel.CourseEpisodeTitle">
+                    </div>
+                    <div class="form-group">
+                        <label>زمان بخش</label>
+                        <input type="time" class="form-control" asp-for="AdminEpisodeViewModel.EpisodeTime">
+                    </div>
+                    <div class="form-group">
+                        <label>فایل بخش</label>
+                        <input type="file" class="form-control" asp-for="AdminEpisodeViewModel.EpisodeFile">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-12 col-md-6 col-lg-4">
+            <button type="submit" class="btn btn-success btn-lg btn-block">افزودن بخش</button>
+        </div>
+    </div>
+</form>
