@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rHqCRJm9Z52l9BtwJKVoBpW7qnkGa6hyq84TNlGMWeM=",
+  "Hash": "cDDih4ut7D38LZ5PDi3byEqsWwogkWEVKS8RqwbNT6k=",
   "Source": "ElectronicLearn.Web",
   "BasePath": "_content/ElectronicLearn.Web",
   "Mode": "Default",
@@ -1069,40 +1069,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin-assets\\js\\sb-admin.js"
-    },
-    {
-      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\2fc41673fe2f4f448b339a8eba3574e4.mp4",
-      "SourceId": "ElectronicLearn.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\",
-      "BasePath": "_content/ElectronicLearn.Web",
-      "RelativePath": "Courses/Demoes/2fc41673fe2f4f448b339a8eba3574e4.mp4",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Courses\\Demoes\\2fc41673fe2f4f448b339a8eba3574e4.mp4"
-    },
-    {
-      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\efc3492f610444239b512b72d1b14e9a.mp4",
-      "SourceId": "ElectronicLearn.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\",
-      "BasePath": "_content/ElectronicLearn.Web",
-      "RelativePath": "Courses/Demoes/efc3492f610444239b512b72d1b14e9a.mp4",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Courses\\Demoes\\efc3492f610444239b512b72d1b14e9a.mp4"
     },
     {
       "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Episodes\\19\\c9f64be054f44e8087271ae59c137f3a.mp4",

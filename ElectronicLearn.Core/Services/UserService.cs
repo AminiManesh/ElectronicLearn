@@ -78,7 +78,7 @@ namespace ElectronicLearn.Core.Services
             var fixedEmail = FixText.FixEmail(email);
             return _context.Users.SingleOrDefault(u => u.Email == fixedEmail);
         }
-
+        
         public bool ResetPassword(string activeCode, string password)
         {
             var user = _context.Users.SingleOrDefault(u => u.ActiveCode == activeCode);
