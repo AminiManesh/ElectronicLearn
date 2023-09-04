@@ -54,6 +54,8 @@ namespace ElectronicLearn.Core.Services
             return course.CourseId;
         }
         
+
+        // Add episode from admin panel
         public void AddEpisode(AdminEpisodeViewModel episode)
         {
             var CourseEpisode = new CourseEpisode();
