@@ -26,11 +26,11 @@ namespace ElectronicLearn.Core.Services.Interfaces
         int AddCourse (Course course, IFormFile demoVideo, IFormFile courseImage);
         Course GetCourseById(int courseId);
         void UpdateCourse(Course course, IFormFile demoVideo, IFormFile courseImage);
-        AdminEpisodeListViewModel GetCourseEpisodes(int courseId);
         #endregion
 
 
         #region Episode
+        AdminEpisodeListViewModel GetCourseEpisodes(int courseId);
         public bool IsFileExists(IFormFile file, string folderPath);
         public void AddEpisode(AdminEpisodeViewModel episode);
         #endregion
