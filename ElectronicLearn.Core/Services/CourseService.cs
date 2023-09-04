@@ -25,7 +25,7 @@ namespace ElectronicLearn.Core.Services
         {
             _context = context;
         }
-
+        // Add course from admin panel
         public int AddCourse(Course course, IFormFile demoVideo, IFormFile courseImage)
         {
             course.CreateDate = DateTime.Now;
