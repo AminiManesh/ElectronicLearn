@@ -29,6 +29,12 @@ namespace ElectronicLearn.Web.Pages.Admin.Courses
                 return Page();
             }
 
+            if (_courseService.IsFileExists(AdminEpisodeViewModel.EpisodeFile, $"wwwroot/Courses/Episodes/{AdminEpisodeViewModel.CourseId}/"))
+            {
+                ViewData["FileExists"] = true;
+                return Page();
+            }
+
             _courseService.AddEpisode(AdminEpisodeViewModel);
 
             return Redirect($"/Admin/Courses/IndexEpisode/?courseId={AdminEpisodeViewModel.CourseId}");
