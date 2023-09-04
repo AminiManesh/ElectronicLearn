@@ -37,6 +37,7 @@ namespace ElectronicLearn.Core.Services
             return _context.Users.Any(u => u.UserName == username);
         }
 
+        // Add User
         public int AddUser(User user)
         {
             _context.Users.Add(user);
