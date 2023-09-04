@@ -46,6 +46,7 @@ namespace ElectronicLearn.Core.Tools
             }
         }
 
+        // Check the file is exists or not
         public static bool IsFileExists(IFormFile file, string saveFolderPath)
         {
             string fileName = file.FileName;
