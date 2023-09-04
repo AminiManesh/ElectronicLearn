@@ -46,6 +46,13 @@ namespace ElectronicLearn.Core.Tools
             }
         }
 
+        public static bool IsFileExists(IFormFile file, string saveFolderPath)
+        {
+            string fileName = file.FileName;
+            string checkPath = Path.Combine(Directory.GetCurrentDirectory(), saveFolderPath, fileName);
+            return File.Exists(checkPath);
+        }
+
         public static void DeletePreviousFile(string saveFolderPath, string prevFileName)
         {
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), saveFolderPath, prevFileName);
