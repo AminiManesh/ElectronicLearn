@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        @if ((bool)ViewData["FileExists"] == true)
+                        @if ((bool?)ViewData["FileExists"] == true)
                         {
                             <div class="alert alert-danger">
                                 نام فایل معتبر نیست، لفطا نام فایل را تغییر دهید.

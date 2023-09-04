@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PcDKtukYfM47vS32vBGKjKM4GtufxX7+WDZqk692nDc=",
+  "Hash": "8xJf9WLmfNfSPmE4euYuJECTnzKI7oD7hNfNEh5aULY=",
   "Source": "ElectronicLearn.Web",
   "BasePath": "_content/ElectronicLearn.Web",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Courses\\Episodes\\19\\c9f64be054f44e8087271ae59c137f3a.mp4"
+    },
+    {
+      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Episodes\\19\\قسمت 1.rar",
+      "SourceId": "ElectronicLearn.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\",
+      "BasePath": "_content/ElectronicLearn.Web",
+      "RelativePath": "Courses/Episodes/19/قسمت 1.rar",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Courses\\Episodes\\19\\قسمت 1.rar"
     },
     {
       "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\92287f46e6ee4530aa5483bf5e0b3159.jpg",
