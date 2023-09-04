@@ -10,7 +10,7 @@ namespace ElectronicLearn.Core.Security
 {
     public static class ImageValidator
     {
-        // Checks the file is type of image or not
+        // Check its image or not
         public static bool IsImage(this IFormFile file)
         {
 			try
