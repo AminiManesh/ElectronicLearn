@@ -54,6 +54,12 @@ namespace ElectronicLearn.Core.Tools
             return File.Exists(checkPath);
         }
 
+        // Check the file path is exists or not
+        public static bool IsFileExists(string filePath)
+        {
+            return File.Exists(filePath);
+        }
+
         public static void DeletePreviousFile(string saveFolderPath, string prevFileName)
         {
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), saveFolderPath, prevFileName);
