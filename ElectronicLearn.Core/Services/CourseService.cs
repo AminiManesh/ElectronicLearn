@@ -206,6 +206,12 @@ namespace ElectronicLearn.Core.Services
             return result;
         }
 
+        // Check the file is exits or not
+        public bool IsFileExists(IFormFile file, string folderPath)
+        {
+            return FileTools.IsFileExists(file, folderPath);
+        }
+
         // Update and edit course from admin panel
         public void UpdateCourse(Course course, IFormFile demoVideo, IFormFile courseImage)
         {

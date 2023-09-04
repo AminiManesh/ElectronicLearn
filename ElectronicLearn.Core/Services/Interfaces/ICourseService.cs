@@ -31,6 +31,7 @@ namespace ElectronicLearn.Core.Services.Interfaces
 
 
         #region Episode
+        public bool IsFileExists(IFormFile file, string folderPath);
         public void AddEpisode(AdminEpisodeViewModel episode);
         #endregion
     }
