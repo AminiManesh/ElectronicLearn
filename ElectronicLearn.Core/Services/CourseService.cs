@@ -206,6 +206,7 @@ namespace ElectronicLearn.Core.Services
             return result;
         }
 
+        // Check the file is exits or not
         public bool IsFileExists(IFormFile file, string folderPath)
         {
             return FileTools.IsFileExists(file, folderPath);
