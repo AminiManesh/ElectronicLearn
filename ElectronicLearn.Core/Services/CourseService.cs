@@ -71,7 +71,8 @@ namespace ElectronicLearn.Core.Services
                 {
                     Directory.CreateDirectory(courseEpisodesPath);
                 }
-                CourseEpisode.EpisodeFileName = FileTools.SaveFile(episode.EpisodeFile, $"wwwroot/Courses/Episodes/{episode.CourseId}/");
+                FileTools.SaveFileWithItsName(episode.EpisodeFile, $"wwwroot/Courses/Episodes/{episode.CourseId}/");
+                CourseEpisode.EpisodeFileName = episode.EpisodeFile.FileName;
             }
 
             _context.Add(CourseEpisode);

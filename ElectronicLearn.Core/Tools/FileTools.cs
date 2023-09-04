@@ -30,6 +30,7 @@ namespace ElectronicLearn.Core.Tools
             return fileName;
         }
 
+        // Save the file with out changing its name to a unique code (save the file with its own name)
         public static void SaveFileWithItsName(IFormFile file, string saveFolderPath, bool deletePreviousFile = false, string prevFileName = "")
         {
             if (deletePreviousFile)
