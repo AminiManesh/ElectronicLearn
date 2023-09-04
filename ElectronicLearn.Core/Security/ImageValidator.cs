@@ -15,7 +15,7 @@ namespace ElectronicLearn.Core.Security
         {
 			try
 			{
-				Image img = Image.FromStream(file.OpenReadStream());
+				var image = Image.FromStream(file.OpenReadStream());
 				return true;
 			}
 			catch
