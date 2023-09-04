@@ -25,6 +25,7 @@ namespace ElectronicLearn.Web.Pages.Admin.Courses
         {
             if (!ModelState.IsValid)
             {
+                var test = ModelState.Values.First();
                 return Page();
             }
 
