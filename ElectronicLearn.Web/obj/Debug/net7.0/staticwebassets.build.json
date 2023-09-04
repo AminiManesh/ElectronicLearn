@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cDDih4ut7D38LZ5PDi3byEqsWwogkWEVKS8RqwbNT6k=",
+  "Hash": "PcDKtukYfM47vS32vBGKjKM4GtufxX7+WDZqk692nDc=",
   "Source": "ElectronicLearn.Web",
   "BasePath": "_content/ElectronicLearn.Web",
   "Mode": "Default",
@@ -1800,6 +1800,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\UserAvatars\\6b0da0ef34f14b90af4e329dd1cd24e6.jpg"
+    },
+    {
+      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\7f1fc943fd5847b0b7b20a5efe7e742f.jpg",
+      "SourceId": "ElectronicLearn.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\",
+      "BasePath": "_content/ElectronicLearn.Web",
+      "RelativePath": "img/UserAvatars/7f1fc943fd5847b0b7b20a5efe7e742f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\UserAvatars\\7f1fc943fd5847b0b7b20a5efe7e742f.jpg"
     },
     {
       "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\a3bcac6d09ea481eb8038ad1b9d81d9e.jpg",

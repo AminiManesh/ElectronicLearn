@@ -30,6 +30,21 @@ namespace ElectronicLearn.Core.Tools
             return fileName;
         }
 
+        public static void SaveFileWithItsName(IFormFile file, string saveFolderPath, bool deletePreviousFile = false, string prevFileName = "")
+        {
+            if (deletePreviousFile)
+            {
+                DeletePreviousFile(saveFolderPath, prevFileName);
+            }
+
+            string fileName = file.FileName;
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), saveFolderPath, fileName);
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                file.CopyTo(stream);
+            }
+        }
+
         public static void DeletePreviousFile(string saveFolderPath, string prevFileName)
         {
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), saveFolderPath, prevFileName);
