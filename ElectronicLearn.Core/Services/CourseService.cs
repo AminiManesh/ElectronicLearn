@@ -203,6 +203,7 @@ namespace ElectronicLearn.Core.Services
             return result;
         }
 
+        // Update and edit course from admin panel
         public void UpdateCourse(Course course, IFormFile demoVideo, IFormFile courseImage)
         {
             course.UpdateDate = DateTime.Now;
