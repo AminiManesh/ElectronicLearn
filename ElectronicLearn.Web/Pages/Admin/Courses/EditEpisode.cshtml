@@ -1,8 +1,7 @@
 ﻿@page
-@model ElectronicLearn.Web.Pages.Admin.Courses.CreateEpisodeModel
-
+@model ElectronicLearn.Web.Pages.Admin.Courses.EditEpisodeModel
 @{
-    ViewData["Title"] = "افزودن بخش جدید";
+    ViewData["Title"] = "ویرایش بخش";
 }
 
 
@@ -16,6 +15,7 @@
                 <div class="panel-body">
                     <div asp-validation-summary="All" class="text-danger"></div>
 
+                    <input type="hidden" asp-for="AdminEpisodeViewModel.CourseEpisodeId" />
                     <input type="hidden" asp-for="AdminEpisodeViewModel.CourseId" />
 
                     <div class="form-group">
@@ -34,12 +34,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        @if ((bool?)ViewData["FileExists"] == true)
-                        {
-                            <div class="alert alert-danger">
-                                نام فایل معتبر نیست، لفطا نام فایل را تغییر دهید.
-                            </div>
-                        }
                         <label>فایل بخش</label>
                         <input type="file" class="form-control" asp-for="AdminEpisodeViewModel.EpisodeFile">
                     </div>
@@ -48,7 +42,7 @@
         </div>
 
         <div class="col col-12 col-md-6 col-lg-4">
-            <button type="submit" class="btn btn-success btn-lg btn-block">افزودن بخش</button>
+            <button type="submit" class="btn btn-success btn-lg btn-block">ویرایش بخش</button>
         </div>
     </div>
 </form>

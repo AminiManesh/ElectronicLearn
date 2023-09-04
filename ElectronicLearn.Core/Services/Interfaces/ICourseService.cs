@@ -32,7 +32,9 @@ namespace ElectronicLearn.Core.Services.Interfaces
         #region Episode
         AdminEpisodeListViewModel GetCourseEpisodes(int courseId);
         public bool IsFileExists(IFormFile file, string folderPath);
+        public AdminEpisodeViewModel GetEpisodeForEdit(int episodeId);
         public void AddEpisode(AdminEpisodeViewModel episode);
+        public void UpdateEpisode(AdminEpisodeViewModel episode);
         #endregion
     }
 }

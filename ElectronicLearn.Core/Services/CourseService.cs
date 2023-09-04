@@ -53,7 +53,7 @@ namespace ElectronicLearn.Core.Services
 
             return course.CourseId;
         }
-        
+
 
         // Add episode from admin panel
         public void AddEpisode(AdminEpisodeViewModel episode)
@@ -206,6 +206,20 @@ namespace ElectronicLearn.Core.Services
             return result;
         }
 
+        public AdminEpisodeViewModel GetEpisodeForEdit(int episodeId)
+        {
+            return _context.CourseEpisodes
+                .Where(e => e.CourseEpisodeId == episodeId)
+                .Select(e => new AdminEpisodeViewModel()
+                {
+                    CourseEpisodeId = e.CourseEpisodeId,
+                    CourseEpisodeTitle = e.CourseEpisodeTitle,
+                    CourseId = e.CourseId,
+                    EpisodeTime = e.EpisodeTime,
+                    IsFree = e.IsFree
+                }).Single();
+        }
+
         // Check the file is exits or not
         public bool IsFileExists(IFormFile file, string folderPath)
         {
@@ -247,6 +261,23 @@ namespace ElectronicLearn.Core.Services
             }
 
             _context.Courses.Update(course);
+            _context.SaveChanges();
+        }
+
+        public void UpdateEpisode(AdminEpisodeViewModel episode)
+        {
+            var updateEpisode = _context.CourseEpisodes.Find(episode.CourseEpisodeId);
+            updateEpisode.CourseEpisodeTitle = episode.CourseEpisodeTitle;
+            updateEpisode.EpisodeTime = episode.EpisodeTime;
+            updateEpisode.IsFree = episode.IsFree;
+
+            if (episode.EpisodeFile != null)
+            {
+                FileTools.SaveFileWithItsName(episode.EpisodeFile, $"wwwroot/Courses/Episodes/{episode.CourseId}/", true, updateEpisode.EpisodeFileName);
+                updateEpisode.EpisodeFileName = episode.EpisodeFile.FileName;
+            }
+
+            _context.Update(updateEpisode);
             _context.SaveChanges();
         }
     }
