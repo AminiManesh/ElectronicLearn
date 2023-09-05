@@ -76,18 +76,18 @@ namespace ElectronicLearn.Core.Tools
                 decimal imageWidth = image.Width;
                 decimal imageHeight = image.Height;
 
-                decimal newWidth = 150;
+                decimal newWidth = 300;
                 decimal newHeight = (imageHeight * newWidth) / imageWidth;
 
                 using (var bitmap = new Bitmap(image, new Size((int)newWidth, (int)newHeight)))
                 {
-                    float wRes = bitmap.HorizontalResolution;
-                    float hRes = bitmap.VerticalResolution;
+                    //float wRes = bitmap.HorizontalResolution;
+                    //float hRes = bitmap.VerticalResolution;
 
-                    float newWRes = wRes / 2f;
-                    float newHRes = hRes / 2f;
+                    //float newWRes = wRes / 2f;
+                    //float newHRes = hRes / 2f;
 
-                    bitmap.SetResolution(newWRes, newHRes);
+                    //bitmap.SetResolution(newWRes, newHRes);
                     await Task.Run(() =>
                     {
                         bitmap.Save(saveFolderPath);
