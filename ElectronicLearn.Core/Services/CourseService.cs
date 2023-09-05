@@ -252,7 +252,10 @@ namespace ElectronicLearn.Core.Services
 
             if (selectedGroups != null && selectedGroups.Any())
             {
-                // Todo
+                foreach (var groupId in selectedGroups)
+                {
+                    result = result.Where(c => c.GroupId == groupId || c.SubGroupId == groupId);
+                }
             }
 
             int skip = (pageId - 1) * take;
