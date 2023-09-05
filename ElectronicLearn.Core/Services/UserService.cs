@@ -274,6 +274,8 @@ namespace ElectronicLearn.Core.Services
             var updateUser = GetUserById(user.UserId, true);
             updateUser.Email = user.Email;
             updateUser.UserName = user.UserName;
+            updateUser.IsActive = user.IsActive;
+            updateUser.ActiveCode = TextGenerator.GenerateUniqeCode();
 
             if (user.Balance != -1)
             {
@@ -283,11 +285,6 @@ namespace ElectronicLearn.Core.Services
             if (!string.IsNullOrEmpty(user.Password))
             {
                 updateUser.Password = PasswordHelper.EncodePasswordMd5(user.Password);
-            }
-
-            if (user.IsActive)
-            {
-                ActiveUser(updateUser.ActiveCode);
             }
 
 

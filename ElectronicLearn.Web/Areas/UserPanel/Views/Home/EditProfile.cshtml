@@ -51,7 +51,7 @@
                                     <input asp-for="Avatar" class="form-control" aria-describedby="avatar">
                                 </div>
                                 <p class="mb-1">لطفا فقط تصویر انتخاب کنید.</p>
-                                <img class="current-avatar img-thumbnail border border-1 border-dark" src="/img/UserAvatars/@Model.AvatarName" />
+                                <img id="newImage" class="current-avatar img-thumbnail border border-1 border-dark" src="/img/UserAvatars/@Model.AvatarName" />
                             </div>
 
                             <div class="col-md-7 col-sm-8 col-xs-12">
@@ -64,3 +64,14 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        Avatar.onchange = evt => {
+            const [file] = Avatar.files
+            if (file) {
+                newImage.src = URL.createObjectURL(file)
+            }
+        }
+    </script>
+}

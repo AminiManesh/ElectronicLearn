@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yQSXMS9DFP9M5DCj+JO57oGogm0qN9DrXVcCpBoRE1g=",
+  "Hash": "MFrn34zxtbbd+Nr8KaIXfk6BHn90E0JjJq4oGD7DNwI=",
   "Source": "ElectronicLearn.Web",
   "BasePath": "_content/ElectronicLearn.Web",
   "Mode": "Default",
@@ -1105,12 +1105,12 @@
       "OriginalItemSpec": "wwwroot\\Courses\\Episodes\\19\\معرفی دوره asp.rar"
     },
     {
-      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\92287f46e6ee4530aa5483bf5e0b3159.jpg",
+      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Episodes\\20\\معرفی دوره asp.rar",
       "SourceId": "ElectronicLearn.Web",
       "SourceType": "Discovered",
       "ContentRoot": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\",
       "BasePath": "_content/ElectronicLearn.Web",
-      "RelativePath": "Courses/Image/92287f46e6ee4530aa5483bf5e0b3159.jpg",
+      "RelativePath": "Courses/Episodes/20/معرفی دوره asp.rar",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1119,15 +1119,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Courses\\Image\\92287f46e6ee4530aa5483bf5e0b3159.jpg"
+      "OriginalItemSpec": "wwwroot\\Courses\\Episodes\\20\\معرفی دوره asp.rar"
     },
     {
-      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\9ecfe27cffe2405c849f0e10bf23cf85.jpg",
+      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\0b889b7cee9f459a8bf15e530028e8da.jpg",
       "SourceId": "ElectronicLearn.Web",
       "SourceType": "Discovered",
       "ContentRoot": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\",
       "BasePath": "_content/ElectronicLearn.Web",
-      "RelativePath": "Courses/Image/9ecfe27cffe2405c849f0e10bf23cf85.jpg",
+      "RelativePath": "Courses/Image/0b889b7cee9f459a8bf15e530028e8da.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1136,7 +1136,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Courses\\Image\\9ecfe27cffe2405c849f0e10bf23cf85.jpg"
+      "OriginalItemSpec": "wwwroot\\Courses\\Image\\0b889b7cee9f459a8bf15e530028e8da.jpg"
+    },
+    {
+      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\ac79acaeed8e4670a9910f59f41e1a5d.jpg",
+      "SourceId": "ElectronicLearn.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\",
+      "BasePath": "_content/ElectronicLearn.Web",
+      "RelativePath": "Courses/Image/ac79acaeed8e4670a9910f59f41e1a5d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Courses\\Image\\ac79acaeed8e4670a9910f59f41e1a5d.jpg"
     },
     {
       "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\no-image.jpg",
@@ -1156,12 +1173,12 @@
       "OriginalItemSpec": "wwwroot\\Courses\\Image\\no-image.jpg"
     },
     {
-      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\92287f46e6ee4530aa5483bf5e0b3159.jpg",
+      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\0b889b7cee9f459a8bf15e530028e8da.jpg",
       "SourceId": "ElectronicLearn.Web",
       "SourceType": "Discovered",
       "ContentRoot": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\",
       "BasePath": "_content/ElectronicLearn.Web",
-      "RelativePath": "Courses/Thumbnail/92287f46e6ee4530aa5483bf5e0b3159.jpg",
+      "RelativePath": "Courses/Thumbnail/0b889b7cee9f459a8bf15e530028e8da.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1170,15 +1187,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Courses\\Thumbnail\\92287f46e6ee4530aa5483bf5e0b3159.jpg"
+      "OriginalItemSpec": "wwwroot\\Courses\\Thumbnail\\0b889b7cee9f459a8bf15e530028e8da.jpg"
     },
     {
-      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\9ecfe27cffe2405c849f0e10bf23cf85.jpg",
+      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\ac79acaeed8e4670a9910f59f41e1a5d.jpg",
       "SourceId": "ElectronicLearn.Web",
       "SourceType": "Discovered",
       "ContentRoot": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\",
       "BasePath": "_content/ElectronicLearn.Web",
-      "RelativePath": "Courses/Thumbnail/9ecfe27cffe2405c849f0e10bf23cf85.jpg",
+      "RelativePath": "Courses/Thumbnail/ac79acaeed8e4670a9910f59f41e1a5d.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1187,7 +1204,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Courses\\Thumbnail\\9ecfe27cffe2405c849f0e10bf23cf85.jpg"
+      "OriginalItemSpec": "wwwroot\\Courses\\Thumbnail\\ac79acaeed8e4670a9910f59f41e1a5d.jpg"
     },
     {
       "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\no-image.jpg",
@@ -1904,12 +1921,12 @@
       "OriginalItemSpec": "wwwroot\\img\\UserAvatars\\avatar.jpg"
     },
     {
-      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\c5bb594d1c6c41b79e5c7104f758a48c.jpg",
+      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\e17f57d4c088433e8ac51735b30dafb4.jpg",
       "SourceId": "ElectronicLearn.Web",
       "SourceType": "Discovered",
       "ContentRoot": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\",
       "BasePath": "_content/ElectronicLearn.Web",
-      "RelativePath": "img/UserAvatars/c5bb594d1c6c41b79e5c7104f758a48c.jpg",
+      "RelativePath": "img/UserAvatars/e17f57d4c088433e8ac51735b30dafb4.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1918,7 +1935,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\UserAvatars\\c5bb594d1c6c41b79e5c7104f758a48c.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\UserAvatars\\e17f57d4c088433e8ac51735b30dafb4.jpg"
     },
     {
       "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\UserAvatars\\e57e086db2424815a7ce2417af23aa09.jpg",

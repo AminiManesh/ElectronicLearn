@@ -1024,12 +1024,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\19\معرفی دوره asp.rar))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Image\92287f46e6ee4530aa5483bf5e0b3159.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\معرفی دوره asp.rar))">
       <SourceType>Package</SourceType>
       <SourceId>ElectronicLearn.Web</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ElectronicLearn.Web</BasePath>
-      <RelativePath>Courses/Image/92287f46e6ee4530aa5483bf5e0b3159.jpg</RelativePath>
+      <RelativePath>Courses/Episodes/20/معرفی دوره asp.rar</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1038,14 +1038,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Image\92287f46e6ee4530aa5483bf5e0b3159.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\معرفی دوره asp.rar))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Image\9ecfe27cffe2405c849f0e10bf23cf85.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Image\0b889b7cee9f459a8bf15e530028e8da.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ElectronicLearn.Web</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ElectronicLearn.Web</BasePath>
-      <RelativePath>Courses/Image/9ecfe27cffe2405c849f0e10bf23cf85.jpg</RelativePath>
+      <RelativePath>Courses/Image/0b889b7cee9f459a8bf15e530028e8da.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1054,7 +1054,23 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Image\9ecfe27cffe2405c849f0e10bf23cf85.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Image\0b889b7cee9f459a8bf15e530028e8da.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Image\ac79acaeed8e4670a9910f59f41e1a5d.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ElectronicLearn.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ElectronicLearn.Web</BasePath>
+      <RelativePath>Courses/Image/ac79acaeed8e4670a9910f59f41e1a5d.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Image\ac79acaeed8e4670a9910f59f41e1a5d.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Image\no-image.jpg))">
       <SourceType>Package</SourceType>
@@ -1072,12 +1088,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Image\no-image.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Thumbnail\92287f46e6ee4530aa5483bf5e0b3159.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Thumbnail\0b889b7cee9f459a8bf15e530028e8da.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ElectronicLearn.Web</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ElectronicLearn.Web</BasePath>
-      <RelativePath>Courses/Thumbnail/92287f46e6ee4530aa5483bf5e0b3159.jpg</RelativePath>
+      <RelativePath>Courses/Thumbnail/0b889b7cee9f459a8bf15e530028e8da.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1086,14 +1102,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Thumbnail\92287f46e6ee4530aa5483bf5e0b3159.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Thumbnail\0b889b7cee9f459a8bf15e530028e8da.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Thumbnail\9ecfe27cffe2405c849f0e10bf23cf85.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Thumbnail\ac79acaeed8e4670a9910f59f41e1a5d.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ElectronicLearn.Web</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ElectronicLearn.Web</BasePath>
-      <RelativePath>Courses/Thumbnail/9ecfe27cffe2405c849f0e10bf23cf85.jpg</RelativePath>
+      <RelativePath>Courses/Thumbnail/ac79acaeed8e4670a9910f59f41e1a5d.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1102,7 +1118,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Thumbnail\9ecfe27cffe2405c849f0e10bf23cf85.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Thumbnail\ac79acaeed8e4670a9910f59f41e1a5d.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Thumbnail\no-image.jpg))">
       <SourceType>Package</SourceType>
@@ -1776,12 +1792,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\UserAvatars\avatar.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\UserAvatars\c5bb594d1c6c41b79e5c7104f758a48c.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\UserAvatars\e17f57d4c088433e8ac51735b30dafb4.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>ElectronicLearn.Web</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ElectronicLearn.Web</BasePath>
-      <RelativePath>img/UserAvatars/c5bb594d1c6c41b79e5c7104f758a48c.jpg</RelativePath>
+      <RelativePath>img/UserAvatars/e17f57d4c088433e8ac51735b30dafb4.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1790,7 +1806,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\UserAvatars\c5bb594d1c6c41b79e5c7104f758a48c.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\UserAvatars\e17f57d4c088433e8ac51735b30dafb4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\UserAvatars\e57e086db2424815a7ce2417af23aa09.jpg))">
       <SourceType>Package</SourceType>
