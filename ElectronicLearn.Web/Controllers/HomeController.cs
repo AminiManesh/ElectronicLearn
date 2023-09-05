@@ -7,14 +7,16 @@ namespace ElectronicLearn.Web.Controllers
     public class HomeController : Controller
     {
         private readonly IWalletService _walletService;
-        public HomeController(IWalletService walletService)
+        private readonly ICourseService _courseService;
+        public HomeController(IWalletService walletService, ICourseService courseService)
         {
             _walletService = walletService;
+            _courseService = courseService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(_courseService.GetCourses());
         }
 
         [Route("ChargeWallet/{id}")]

@@ -76,6 +76,7 @@ namespace ElectronicLearn.Core.Services
             }
 
             _context.Add(CourseEpisode);
+            _context.Courses.Find(episode.CourseId).UpdateDate = DateTime.Now;
             _context.SaveChanges();
         }
 
@@ -204,6 +205,70 @@ namespace ElectronicLearn.Core.Services
             result.CourseName = _context.Courses.Find(courseId).CourseTitle;
 
             return result;
+        }
+
+        public List<CourseListItemViewModel> GetCourses(int pageId = 1, string filter = "", string priceType = "all", string orderBy = "createDate", int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null, int take = 0)
+        {
+            if (take == 0)
+                take = 8;
+            IQueryable<Course> result = _context.Courses;
+
+            if (!string.IsNullOrEmpty(filter))
+            {
+                result = result.Where(c => c.CourseTitle.Contains(filter));
+            }
+
+            switch (priceType)
+            {
+                case "paidfor":
+                    result = result.Where(c => c.CoursePrice > 0);
+                    break;
+                case "free":
+                    result = result.Where(c => c.CoursePrice == 0);
+                    break;
+                default:
+                    break;
+            }
+
+            switch (orderBy)
+            {
+                case "createDate":
+                    result = result.OrderByDescending(c => c.CreateDate);
+                    break;
+                case "updateDate":
+                    result = result.OrderByDescending(c => c.UpdateDate);
+                    break;
+                case "price":
+                    result = result.OrderByDescending(c => c.CoursePrice);
+                    break;
+                default:
+                    break;
+            }
+
+            if (startPrice != 0)
+                result = result.Where(c => c.CoursePrice >= startPrice);
+            if (endPrice != 0)
+                result = result.Where(c => c.CoursePrice <= endPrice);
+
+            if (selectedGroups != null && selectedGroups.Any())
+            {
+                // Todo
+            }
+
+            int skip = (pageId - 1) * take;
+            var final = result
+                .Skip(skip)
+                .Take(take)
+                .Include(c => c.CourseEpisodes)
+                .Select(r => new CourseListItemViewModel()
+                {
+                    CourseId = r.CourseId,
+                    ImageName = r.CourseImageName,
+                    Price = r.CoursePrice,
+                    Title = r.CourseTitle,
+                    TotalTime = new TimeSpan(r.CourseEpisodes.Sum(e => e.EpisodeTime.Hours), r.CourseEpisodes.Sum(e => e.EpisodeTime.Minutes), r.CourseEpisodes.Sum(e => e.EpisodeTime.Seconds))
+                }).ToList();
+            return final;
         }
 
         public AdminEpisodeViewModel GetEpisodeForEdit(int episodeId)

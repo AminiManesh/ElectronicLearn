@@ -23,9 +23,10 @@ namespace ElectronicLearn.Web.Pages.Admin.Courses
 
         public IActionResult OnPost()
         {
+            ModelState.ClearValidationState("AdminEpisodeViewModel.EpisodeFile");
+            ModelState.MarkFieldValid("AdminEpisodeViewModel.EpisodeFile");
             if (!ModelState.IsValid)
             {
-                var test = ModelState.Values.First();
                 return Page();
             }
 
