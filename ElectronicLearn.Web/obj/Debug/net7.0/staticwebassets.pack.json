@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\13b4f88698224c50afa791b2d050d5a9.rar",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\13b4f88698224c50afa791b2d050d5a9.rar"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\46da50b908ad496db26deb95b242a603.rar",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\46da50b908ad496db26deb95b242a603.rar"
+    },
+    {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Episodes\\19\\قسمت 1.rar",
       "PackagePath": "staticwebassets\\Courses\\Episodes\\19\\قسمت 1.rar"
     },
@@ -17,6 +25,14 @@
       "PackagePath": "staticwebassets\\Courses\\Image\\0b889b7cee9f459a8bf15e530028e8da.jpg"
     },
     {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\264046fdfb324aef8a8ac446811dbd59.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\264046fdfb324aef8a8ac446811dbd59.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\68255587b1fb4df99833a807453657ea.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\68255587b1fb4df99833a807453657ea.jpg"
+    },
+    {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\ac79acaeed8e4670a9910f59f41e1a5d.jpg",
       "PackagePath": "staticwebassets\\Courses\\Image\\ac79acaeed8e4670a9910f59f41e1a5d.jpg"
     },
@@ -27,6 +43,14 @@
     {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\0b889b7cee9f459a8bf15e530028e8da.jpg",
       "PackagePath": "staticwebassets\\Courses\\Thumbnail\\0b889b7cee9f459a8bf15e530028e8da.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\264046fdfb324aef8a8ac446811dbd59.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\264046fdfb324aef8a8ac446811dbd59.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\68255587b1fb4df99833a807453657ea.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\68255587b1fb4df99833a807453657ea.jpg"
     },
     {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\ac79acaeed8e4670a9910f59f41e1a5d.jpg",
@@ -405,6 +429,10 @@
       "PackagePath": "staticwebassets\\img\\UserAvatars\\fe4f19c0b4914d7491c7ffce7376bff0.jpg"
     },
     {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\all\\674c8323-a1d0-4e8d-9313-31fc786aaf00.jpg",
+      "PackagePath": "staticwebassets\\img\\all\\674c8323-a1d0-4e8d-9313-31fc786aaf00.jpg"
+    },
+    {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
@@ -683,6 +711,14 @@
     {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\jquery.slim.min.map"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\noUiSlider\\nouislider.min.css",
+      "PackagePath": "staticwebassets\\noUiSlider\\nouislider.min.css"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\noUiSlider\\nouislider.min.js",
+      "PackagePath": "staticwebassets\\noUiSlider\\nouislider.min.js"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ElectronicLearn.Web.Microsoft.AspNetCore.StaticWebAssets.props",

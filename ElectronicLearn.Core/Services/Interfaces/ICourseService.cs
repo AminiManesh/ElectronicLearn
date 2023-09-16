@@ -26,7 +26,7 @@ namespace ElectronicLearn.Core.Services.Interfaces
         int AddCourse(Course course, IFormFile demoVideo, IFormFile courseImage);
         Course GetCourseById(int courseId);
         void UpdateCourse(Course course, IFormFile demoVideo, IFormFile courseImage);
-        List<CourseListItemViewModel> GetCourses(int pageId = 1, string filter = "", string priceType = "all", string orderBy = "createDate", int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null, int take = 0);
+        Tuple<List<CourseListItemViewModel>, int> GetCourses(int pageId = 1, string filter = "", string priceType = "all", string orderBy = "createDate", int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null, int take = 0);
         #endregion
 
 

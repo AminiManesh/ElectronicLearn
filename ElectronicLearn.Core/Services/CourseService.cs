@@ -207,7 +207,7 @@ namespace ElectronicLearn.Core.Services
             return result;
         }
 
-        public List<CourseListItemViewModel> GetCourses(int pageId = 1, string filter = "", string priceType = "all", string orderBy = "createDate", int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null, int take = 0)
+        public Tuple<List<CourseListItemViewModel>, int> GetCourses(int pageId = 1, string filter = "", string priceType = "all", string orderBy = "createDate", int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null, int take = 0)
         {
             if (take == 0)
                 take = 8;
@@ -252,14 +252,22 @@ namespace ElectronicLearn.Core.Services
 
             if (selectedGroups != null && selectedGroups.Any())
             {
-                foreach (var groupId in selectedGroups)
-                {
-                    result = result.Where(c => c.GroupId == groupId || c.SubGroupId == groupId);
-                }
+                
             }
 
             int skip = (pageId - 1) * take;
-            var final = result
+            var count = result.Count();
+            var pageCount = 0;
+            if (count % take == 0)
+            {
+                pageCount = count / take;
+            }
+            else if (count % take > 0)
+            {
+                pageCount = (count / take) + 1;
+            }
+
+            var query = result
                 .Skip(skip)
                 .Take(take)
                 .Include(c => c.CourseEpisodes)
@@ -271,7 +279,8 @@ namespace ElectronicLearn.Core.Services
                     Title = r.CourseTitle,
                     TotalTime = new TimeSpan(r.CourseEpisodes.Sum(e => e.EpisodeTime.Hours), r.CourseEpisodes.Sum(e => e.EpisodeTime.Minutes), r.CourseEpisodes.Sum(e => e.EpisodeTime.Seconds))
                 }).ToList();
-            return final;
+
+            return Tuple.Create(query, pageCount);
         }
 
         public AdminEpisodeViewModel GetEpisodeForEdit(int episodeId)
