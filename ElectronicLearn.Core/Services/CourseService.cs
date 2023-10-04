@@ -188,6 +188,16 @@ namespace ElectronicLearn.Core.Services
             return _context.Courses.Find(courseId);
         }
 
+        public Course GetCourseDetails(int courseId)
+        {
+            return _context.Courses
+                .Include(c => c.CourseEpisodes)
+                .Include(c => c.CourseLevel)
+                .Include(c => c.CourseStatus)
+                .Include(c => c.Teacher)
+                .FirstOrDefault(c => c.CourseId == courseId);
+        }
+
         public AdminEpisodeListViewModel GetCourseEpisodes(int courseId)
         {
             var result = new AdminEpisodeListViewModel();
@@ -215,7 +225,7 @@ namespace ElectronicLearn.Core.Services
 
             if (!string.IsNullOrEmpty(filter))
             {
-                result = result.Where(c => c.CourseTitle.Contains(filter));
+                result = result.Where(c => c.CourseTitle.Contains(filter) || c.Tags.Contains(filter));
             }
 
             switch (priceType)
@@ -252,7 +262,7 @@ namespace ElectronicLearn.Core.Services
 
             if (selectedGroups != null && selectedGroups.Any())
             {
-                
+
             }
 
             int skip = (pageId - 1) * take;

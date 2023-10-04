@@ -23,5 +23,12 @@ namespace ElectronicLearn.Web.Controllers
             ViewBag.endPrice = endPrice;
             return View(_courseService.GetCourses(pageId, filter, priceType, orderBy, startPrice, endPrice, selectedGroups, 9));
         }
+
+        [Route("ShowCourse/{courseId}")]
+        public IActionResult ShowCourse(int courseId)
+        {
+            var course = _courseService.GetCourseDetails(courseId);
+            return View(course);
+        }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "92wrfaV0rpxdaEzrQrLFrbbbSuZZz8smr6lL05jqYOM=",
+  "Hash": "uzBrE5RAaY+OCPGjJ9p2O89Yr4JrxO1i6cNpCWwNKQY=",
   "Source": "ElectronicLearn.Web",
   "BasePath": "_content/ElectronicLearn.Web",
   "Mode": "Default",
@@ -1613,6 +1613,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\all\\674c8323-a1d0-4e8d-9313-31fc786aaf00.jpg"
+    },
+    {
+      "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\captcha.jpg",
+      "SourceId": "ElectronicLearn.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\",
+      "BasePath": "_content/ElectronicLearn.Web",
+      "RelativePath": "img/captcha.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\captcha.jpg"
     },
     {
       "Identity": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\logo.png",

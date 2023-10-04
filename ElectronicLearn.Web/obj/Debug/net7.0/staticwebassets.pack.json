@@ -433,6 +433,10 @@
       "PackagePath": "staticwebassets\\img\\all\\674c8323-a1d0-4e8d-9313-31fc786aaf00.jpg"
     },
     {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\captcha.jpg",
+      "PackagePath": "staticwebassets\\img\\captcha.jpg"
+    },
+    {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
