@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElectronicLearn.DataLayer.Entities.Order;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -75,6 +76,7 @@ namespace ElectronicLearn.DataLayer.Entities.Course
 
         public virtual CourseStatus? CourseStatus { get; set; }
         public virtual List<CourseEpisode>? CourseEpisodes { get; set; }
+        public virtual List<OrderItem> OrderItems { get; set; }
         #endregion
     }
 }

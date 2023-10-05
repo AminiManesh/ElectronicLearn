@@ -1,4 +1,5 @@
 ﻿using ElectronicLearn.DataLayer.Entities.Course;
+using ElectronicLearn.DataLayer.Entities.Order;
 using ElectronicLearn.DataLayer.Entities.Permission;
 using ElectronicLearn.DataLayer.Entities.User;
 using ElectronicLearn.DataLayer.Entities.Wallet;
@@ -13,7 +14,7 @@ namespace ElectronicLearn.DataLayer.Context
 {
     public class ElectronicLearnContext : DbContext
     {
-        public ElectronicLearnContext(DbContextOptions<ElectronicLearnContext> options) : base (options)
+        public ElectronicLearnContext(DbContextOptions<ElectronicLearnContext> options) : base(options)
         {
 
         }
@@ -43,8 +44,20 @@ namespace ElectronicLearn.DataLayer.Context
         public DbSet<CourseEpisode> CourseEpisodes { get; set; }
         #endregion
 
+        #region Order
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        #endregion
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            var cascadeFKs = modelBuilder.Model.GetEntityTypes()
+                .SelectMany(t => t.GetForeignKeys())
+                .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade);
+
+            foreach (var fk in cascadeFKs)
+                fk.DeleteBehavior = DeleteBehavior.Restrict;
+
             modelBuilder.Entity<User>()
                 .HasQueryFilter(u => !u.IsDeleted);
 

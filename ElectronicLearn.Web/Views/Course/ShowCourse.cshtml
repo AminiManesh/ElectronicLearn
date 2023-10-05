@@ -181,7 +181,7 @@
 
                 @if (Model.CoursePrice != 0)
                 {
-                    <a href=""> شرکت در دوره : @Model.CoursePrice.ToString("#,0") تومان </a>
+                    <a asp-controller="Course" asp-action="BuyCourse" asp-route-id="@Model.CourseId"> شرکت در دوره : @Model.CoursePrice.ToString("#,0") تومان </a>
 
                 }
             </div>

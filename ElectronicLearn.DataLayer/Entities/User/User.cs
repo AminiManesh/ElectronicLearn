@@ -59,6 +59,7 @@ namespace ElectronicLearn.DataLayer.Entities.User
         public virtual Wallet.Wallet Wallet { get; set; }
         public List<UserRole> UserRoles { get; set; }
         public virtual List<Course.Course> Courses { get; set; }
+        public virtual List<Order.Order> Orders { get; set; }
         #endregion
     }
 }

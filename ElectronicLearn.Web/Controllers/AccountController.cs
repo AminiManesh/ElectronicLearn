@@ -97,7 +97,7 @@ namespace ElectronicLearn.Web.Controllers
 
         [HttpPost]
         [Route("Login", Name = "Login")]
-        public IActionResult Login(LoginViewModel login)
+        public IActionResult Login(LoginViewModel login, string ReturnUrl = "/")
         {
             if (!ModelState.IsValid)
             {
@@ -127,6 +127,10 @@ namespace ElectronicLearn.Web.Controllers
 
                     HttpContext.SignInAsync(principal, properties);
                     ViewBag.IsSuccess = true;
+                    if (ReturnUrl != "/")
+                    {
+                        return Redirect(ReturnUrl);
+                    }
                     return View();
                 }
                 else

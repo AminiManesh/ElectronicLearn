@@ -188,6 +188,62 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.ToTable("CourseStatuses");
                 });
 
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Order.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsFinally")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("OrderSum")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrderId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Order.OrderItem", b =>
+                {
+                    b.Property<int>("OrderItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderItemId"));
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.HasKey("OrderItemId");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("OrderItems");
+                });
+
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Permission.Permission", b =>
                 {
                     b.Property<int>("PermissionId")
@@ -408,19 +464,19 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.HasOne("ElectronicLearn.DataLayer.Entities.Course.CourseLevel", "CourseLevel")
                         .WithMany("Courses")
                         .HasForeignKey("CourseLevelId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ElectronicLearn.DataLayer.Entities.Course.CourseStatus", "CourseStatus")
                         .WithMany("Courses")
                         .HasForeignKey("CourseStatusId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ElectronicLearn.DataLayer.Entities.Course.CourseGroup", "CourseGroup")
                         .WithMany("Courses")
                         .HasForeignKey("GroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ElectronicLearn.DataLayer.Entities.Course.CourseGroup", "Group")
@@ -430,7 +486,7 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.HasOne("ElectronicLearn.DataLayer.Entities.User.User", "Teacher")
                         .WithMany("Courses")
                         .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("CourseGroup");
@@ -449,7 +505,7 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.HasOne("ElectronicLearn.DataLayer.Entities.Course.Course", "Course")
                         .WithMany("CourseEpisodes")
                         .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Course");
@@ -460,6 +516,36 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.HasOne("ElectronicLearn.DataLayer.Entities.Course.CourseGroup", null)
                         .WithMany("CourseGroups")
                         .HasForeignKey("ParentId");
+                });
+
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Order.Order", b =>
+                {
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.User.User", "User")
+                        .WithMany("Orders")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Order.OrderItem", b =>
+                {
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.Course.Course", "Course")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.Order.Order", "Order")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Permission.Permission", b =>
@@ -474,13 +560,13 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.HasOne("ElectronicLearn.DataLayer.Entities.Permission.Permission", "Permission")
                         .WithMany("RolePermissions")
                         .HasForeignKey("PermissionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ElectronicLearn.DataLayer.Entities.User.Role", "Role")
                         .WithMany("RolePermissions")
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Permission");
@@ -502,13 +588,13 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.HasOne("ElectronicLearn.DataLayer.Entities.User.Role", "Role")
                         .WithMany("UserRoles")
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ElectronicLearn.DataLayer.Entities.User.User", "User")
                         .WithMany("UserRoles")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Role");
@@ -521,13 +607,13 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.HasOne("ElectronicLearn.DataLayer.Entities.Wallet.TransactionType", "TransactionType")
                         .WithMany("Transactions")
                         .HasForeignKey("TypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ElectronicLearn.DataLayer.Entities.Wallet.Wallet", "Wallet")
                         .WithMany("Transactions")
                         .HasForeignKey("WalletId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("TransactionType");
@@ -538,6 +624,8 @@ namespace ElectronicLearn.DataLayer.Migrations
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Course.Course", b =>
                 {
                     b.Navigation("CourseEpisodes");
+
+                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Course.CourseGroup", b =>
@@ -559,6 +647,11 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.Navigation("Courses");
                 });
 
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Order.Order", b =>
+                {
+                    b.Navigation("OrderItems");
+                });
+
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Permission.Permission", b =>
                 {
                     b.Navigation("Permissions");
@@ -576,6 +669,8 @@ namespace ElectronicLearn.DataLayer.Migrations
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.User.User", b =>
                 {
                     b.Navigation("Courses");
+
+                    b.Navigation("Orders");
 
                     b.Navigation("UserRoles");
                 });

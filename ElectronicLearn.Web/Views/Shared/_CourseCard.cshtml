@@ -2,8 +2,8 @@
 @model CourseListItemViewModel
 
 <article>
-    <a href="ShowCourse/@Model.CourseId" class="img-layer"><img src="/Courses/Thumbnail/@Model.ImageName"></a>
-    <h2><a href="ShowCourse/@Model.CourseId"> @Model.Title </a></h2>
+    <a href="/ShowCourse/@Model.CourseId" class="img-layer"><img src="/Courses/Thumbnail/@Model.ImageName"></a>
+    <h2><a href="/ShowCourse/@Model.CourseId"> @Model.Title </a></h2>
     <span> @((Model.Price == 0) ? "رایگان" : Model.Price.ToString("#,0 تومان")) </span>
     <i>@Model.TotalTime</i>
 </article>

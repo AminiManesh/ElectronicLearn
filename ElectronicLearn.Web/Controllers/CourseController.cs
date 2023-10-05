@@ -1,14 +1,18 @@
 ﻿using ElectronicLearn.Core.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace ElectronicLearn.Web.Controllers
 {
     public class CourseController : Controller
     {
         private readonly ICourseService _courseService;
-        public CourseController(ICourseService courseService)
+        private readonly IOrderService _orderService;
+        public CourseController(ICourseService courseService, IOrderService orderService)
         {
             _courseService = courseService;
+            _orderService = orderService;
         }
 
         public IActionResult Index(int pageId = 1, string filter = "", string priceType = "all", string orderBy = "createDate", int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null)
@@ -29,6 +33,14 @@ namespace ElectronicLearn.Web.Controllers
         {
             var course = _courseService.GetCourseDetails(courseId);
             return View(course);
+        }
+
+        [Authorize]
+        public IActionResult BuyCourse(int id)
+        {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
+            _orderService.AddOrder(userId, id);
+            return Redirect("/ShowCourse/" + id);
         }
     }
 }
