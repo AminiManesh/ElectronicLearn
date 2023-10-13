@@ -178,11 +178,13 @@
                         <i> 52 نفر </i>
                     </li>
                 </ul>
-
+                @if (true)
+                {
+                    
+                }
                 @if (Model.CoursePrice != 0)
                 {
                     <a asp-controller="Course" asp-action="BuyCourse" asp-route-id="@Model.CourseId"> شرکت در دوره : @Model.CoursePrice.ToString("#,0") تومان </a>
-
                 }
             </div>
 

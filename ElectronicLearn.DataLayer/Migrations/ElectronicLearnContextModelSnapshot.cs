@@ -188,6 +188,59 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.ToTable("CourseStatuses");
                 });
 
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Course.UserCourse", b =>
+                {
+                    b.Property<int>("UC_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UC_Id"));
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UC_Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UsersCourses");
+                });
+
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Order.Discount", b =>
+                {
+                    b.Property<int>("DiscountId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DiscountId"));
+
+                    b.Property<string>("DiscountCode")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("EndTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Percent")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("StartTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("UsableCount")
+                        .HasColumnType("int");
+
+                    b.HasKey("DiscountId");
+
+                    b.ToTable("Discounts");
+                });
+
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Order.Order", b =>
                 {
                     b.Property<int>("OrderId")
@@ -365,6 +418,29 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.User.UserDiscount", b =>
+                {
+                    b.Property<int>("UD_Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UD_Id"));
+
+                    b.Property<int>("DiscountId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UD_Id");
+
+                    b.HasIndex("DiscountId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UsersDiscounts");
+                });
+
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.User.UserRole", b =>
                 {
                     b.Property<int>("UserRoleId")
@@ -518,6 +594,25 @@ namespace ElectronicLearn.DataLayer.Migrations
                         .HasForeignKey("ParentId");
                 });
 
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Course.UserCourse", b =>
+                {
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.Course.Course", "Course")
+                        .WithMany("UsersCourses")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.User.User", "User")
+                        .WithMany("UsersCourses")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Order.Order", b =>
                 {
                     b.HasOne("ElectronicLearn.DataLayer.Entities.User.User", "User")
@@ -583,6 +678,25 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.Navigation("Wallet");
                 });
 
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.User.UserDiscount", b =>
+                {
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.Order.Discount", "Discount")
+                        .WithMany("UsersDiscounts")
+                        .HasForeignKey("DiscountId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.User.User", "User")
+                        .WithMany("UsersDiscounts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Discount");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.User.UserRole", b =>
                 {
                     b.HasOne("ElectronicLearn.DataLayer.Entities.User.Role", "Role")
@@ -626,6 +740,8 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.Navigation("CourseEpisodes");
 
                     b.Navigation("OrderItems");
+
+                    b.Navigation("UsersCourses");
                 });
 
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Course.CourseGroup", b =>
@@ -645,6 +761,11 @@ namespace ElectronicLearn.DataLayer.Migrations
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Course.CourseStatus", b =>
                 {
                     b.Navigation("Courses");
+                });
+
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Order.Discount", b =>
+                {
+                    b.Navigation("UsersDiscounts");
                 });
 
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Order.Order", b =>
@@ -673,6 +794,10 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.Navigation("Orders");
 
                     b.Navigation("UserRoles");
+
+                    b.Navigation("UsersCourses");
+
+                    b.Navigation("UsersDiscounts");
                 });
 
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Wallet.TransactionType", b =>

@@ -19,7 +19,7 @@ namespace ElectronicLearn.Core.Services
             _context = context;
         }
 
-        public int AddTransaction(int userId, int amount, string description, bool isPaid = false)
+        public int AddTransaction(int userId, int amount, string description, bool isDeposit, bool isPaid = false)
         {
             var user = _context.Users
                 .Include(u => u.Wallet)
@@ -32,7 +32,7 @@ namespace ElectronicLearn.Core.Services
                 CreateDate = DateTime.Now,
                 IsPaid = isPaid,
                 Description = description,
-                TypeId = 1,
+                TypeId = (isDeposit) ? 1 : 2,
                 WalletId = (int)user.WalletId
             };
             user.Wallet.Transactions.Add(transaction);
@@ -85,7 +85,15 @@ namespace ElectronicLearn.Core.Services
                 .Include(t => t.Wallet)
                 .SingleOrDefault(t => t.TransactionId == transactionId);
 
-            transaction.Wallet.Cash += transaction.Amount;
+            if (transaction.TypeId == 1)
+            {
+                transaction.Wallet.Cash += transaction.Amount;
+            }
+            else
+            {
+                transaction.Wallet.Cash -= transaction.Amount;
+            }
+           
             _context.SaveChanges();
         }
     }

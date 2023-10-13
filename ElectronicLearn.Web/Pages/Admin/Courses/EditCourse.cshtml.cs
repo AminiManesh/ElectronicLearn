@@ -41,6 +41,10 @@ namespace ElectronicLearn.Web.Pages.Admin.Courses
 
         public IActionResult OnPost(IFormFile? demoVideo, IFormFile imgCourseThumb)
         {
+            ModelState.ClearValidationState("Course.OrderItems");
+            ModelState.ClearValidationState("Course.UsersCourses");
+            ModelState.MarkFieldValid("Course.OrderItems");
+            ModelState.MarkFieldValid("Course.UsersCourses");
             if (!ModelState.IsValid)
             {
                 return Page();

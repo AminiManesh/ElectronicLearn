@@ -4,7 +4,8 @@
 @inject ElectronicLearn.Core.Services.Interfaces.IWalletService _walletService
 @{
     ViewData["Title"] = "کیف پول شما";
-    var TransactionList = _walletService.GetAllTransactions(int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString()));
+    var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
+    var TransactionList = _walletService.GetAllTransactions(userId);
 }
 
 <nav aria-label="breadcrumb">
@@ -23,6 +24,13 @@
             <section class="user-account-content">
                 <header><h1> کیف پول شما </h1></header>
                 <div class="inner">
+                    <h4 class="text-center fs-5 mt-2 mb-4">
+                        موجودی:
+                        <span class="fw-bold text-success">
+                            @_walletService.GetUserBalance(userId).ToString("#,0")
+                            <sub>تومان</sub>
+                        </span>
+                    </h4>
                     <form asp-action="Index" method="post">
                         <div class="text-danger mb-4" asp-validation-summary="All"></div>
                         <div class="row">
@@ -63,7 +71,18 @@
                                         }
                                     </td>
                                     <td dir="rtl">@transaction.DateTime.ToLongShamsi()</td>
-                                    <td>@transaction.Description</td>
+                                    @{
+                                        var factorNumber = transaction.Description.Replace("فاکتور شماره ", "");
+                                        var factorLink = $"<a href='/UserPanel/Order/ShowOrder/{factorNumber.Replace("#", "")}'>{factorNumber}</a>";
+                                    }
+                                    @if (transaction.TransactionType == 1)
+                                    {
+                                        <td>@transaction.Description</td>
+                                    }
+                                    else
+                                    {
+                                        <td>@Html.Raw(transaction.Description.Replace(factorNumber, factorLink))</td>
+                                    }
                                 </tr>
                             }
                         </tbody>

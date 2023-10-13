@@ -10,7 +10,7 @@ namespace ElectronicLearn.Core.Services.Interfaces
     public interface IWalletService
     {
         List<TransactionsViewModel> GetAllTransactions(int userId);
-        int AddTransaction(int userId, int amount, string description, bool isPaid = false);
+        int AddTransaction(int userId, int amount, string description, bool isDeposit, bool isPaid = false);
         int GetTransactionAmountById(int transactionId);
         void PayTransaction(int transactionId);
         void UpdateUserBalance(int transactionId);

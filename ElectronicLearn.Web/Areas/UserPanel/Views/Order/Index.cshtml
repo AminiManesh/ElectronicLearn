@@ -1,0 +1,67 @@
+﻿@using ElectronicLearn.Core.Convertors;
+@model List<ElectronicLearn.DataLayer.Entities.Order.Order>
+@{
+    ViewData["Title"] = "فاکتور ها";
+}
+
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" asp-area="">الکترونیک لرن</a></li>
+        <li class="breadcrumb-item active" aria-current="page">فاکتور ها</li>
+    </ul>
+</nav>
+
+<div class="user-account">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <partial name="_UserPanelSidebarPartial" />
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+            <section class="user-account-content">
+                <header><h1> فاکتورهای شما </h1></header>
+                <div class="inner">
+                    <table class="table table-bordered table-striped mt-4">
+                        <thead class="table-primary">
+                            <tr>
+                                <td>شماره فاکتور</td>
+                                <td>تاریخ</td>
+                                <td>جمع</td>
+                                <td>وضعیت</td>
+                                <td>دستورات</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var order in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @order.OrderId
+                                    </td>
+                                    <td>@order.CreateDate.ToLongShamsi()</td>
+                                    <td dir="rtl">@order.OrderSum.ToString("#,0 تومان")</td>
+                                    <td>
+                                        @if (order.IsFinally)
+                                        {
+                                            <span class="text-success fw-bold">پرداخت شده</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-danger fw-bold">در انتظار پرداخت</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a asp-area="UserPanel" asp-controller="Order" asp-action="ShowOrder" asp-route-id="@order.OrderId" class="btn btn-info text-light btn-sm">جزئیات</a>
+                                        @*@if (!order.IsFinally)
+                                        {
+                                            <a asp-area="UserPanel" asp-controller="Order" asp-action="ShowOrder" class="btn btn-success btn-sm">پرداخت</a>
+                                        }*@
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

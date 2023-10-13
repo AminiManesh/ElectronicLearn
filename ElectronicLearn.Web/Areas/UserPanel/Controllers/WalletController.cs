@@ -32,7 +32,7 @@ namespace ElectronicLearn.Web.Areas.UserPanel.Controllers
 
             #region Send request to zarinpal
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
-            int transactionId = _walletService.AddTransaction(userId, charge.Amount, "شارژ کیف پول");
+            int transactionId = _walletService.AddTransaction(userId, charge.Amount, "شارژ کیف پول", true);
 
             var payment = new Payment(charge.Amount);
             var url = $"{Request.Scheme}://{Request.Host}";

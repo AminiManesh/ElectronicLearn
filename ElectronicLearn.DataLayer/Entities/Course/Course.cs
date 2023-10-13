@@ -77,6 +77,7 @@ namespace ElectronicLearn.DataLayer.Entities.Course
         public virtual CourseStatus? CourseStatus { get; set; }
         public virtual List<CourseEpisode>? CourseEpisodes { get; set; }
         public virtual List<OrderItem> OrderItems { get; set; }
+        public virtual List<UserCourse> UsersCourses { get; set; }
         #endregion
     }
 }

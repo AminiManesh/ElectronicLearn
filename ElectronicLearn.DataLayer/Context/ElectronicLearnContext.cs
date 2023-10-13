@@ -42,11 +42,17 @@ namespace ElectronicLearn.DataLayer.Context
         public DbSet<CourseLevel> CourseLevels { get; set; }
         public DbSet<CourseStatus> CourseStatuses { get; set; }
         public DbSet<CourseEpisode> CourseEpisodes { get; set; }
+        public DbSet<UserCourse> UsersCourses { get; set; }
         #endregion
 
         #region Order
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        #endregion
+
+        #region Discount
+        public DbSet<Discount> Discounts { get; set; }
+        public DbSet<UserDiscount> UsersDiscounts { get; set; }
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

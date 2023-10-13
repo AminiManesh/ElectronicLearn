@@ -1,0 +1,141 @@
+﻿@using System.Security.Claims;
+@model ElectronicLearn.DataLayer.Entities.Order.Order
+@inject ElectronicLearn.Core.Services.Interfaces.IWalletService _walletService
+@{
+    ViewData["Title"] = "سبد خرید";
+    int orderSum = Model.OrderSum;
+    int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
+    var type = Context.Request.Query["type"];
+}
+
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" asp-area="">الکترونیک لرن</a></li>
+        <li class="breadcrumb-item active" aria-current="page">فاکتور</li>
+    </ul>
+</nav>
+
+<div class="user-account">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <partial name="_UserPanelSidebarPartial" />
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+            <section class="user-account-content">
+                <header><h1> فاکتور شما </h1></header>
+                <div class="inner">
+                    @if (ViewBag.finaly == true)
+                    {
+                        <div class="alert alert-success">
+                            فاکتور شما با موفقیت پرداخت شد.
+                        </div>
+                    }
+                    <table class="table table-bordered table-striped mt-4">
+                        <thead class="table-primary">
+                            <tr>
+                                <td>دوره</td>
+                                <td>تعداد</td>
+                                <td>قیمت</td>
+                                <td>جمع</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var orderItem in Model.OrderItems)
+                            {
+                                <tr>
+                                    <td>
+                                        <a href="/ShowCourse/@orderItem.CourseId" target="_blank">@orderItem.Course.CourseTitle</a>
+                                    </td>
+                                    <td>@orderItem.Count</td>
+                                    <td dir="rtl">@orderItem.Price.ToString("#,0 تومان")</td>
+                                    <td>@((orderItem.Price * orderItem.Count).ToString("#,0 تومان"))</td>
+                                </tr>
+                            }
+                            @if (!Model.IsFinally)
+                            {
+                                <tr>
+                                    <td colspan="3" class="text-end">کد تخفیف: </td>
+                                    <td>
+                                        <form action="/UserPanel/Order/ApplyDiscount" method="post">
+                                            <input type="hidden" name="orderId" value="@Model.OrderId" />
+                                            <input type="text" class="form-control" name="code" />
+                                            <input type="submit" class="btn btn-primary btn-block mt-2 w-100" value="اعمال" />
+                                        </form>
+                                        @switch (type)
+                                        {
+                                            case "Available":
+                                                <div class="alert alert-info mt-2">
+                                                    کد تخفیف با موفقیت اعمال شد.
+                                                </div>
+                                                break;
+
+                                            case "NotAvailable":
+                                                <div class="alert alert-danger mt-2">
+                                                    کد تخفیف وارد شده اشتباه می‌باشد.
+                                                </div>
+                                                break;
+
+                                            case "OutOfStock":
+                                                <div class="alert alert-danger mt-2">
+                                                    کد تخفیف بیشتر از دفعات مجاز استفاده شده است.
+                                                </div>
+                                                break;
+
+                                            case "NotStarted":
+                                                <div class="alert alert-warning mt-2">
+                                                    زمان استفاده از این کد تخفیف هنوز فرا نرسیده است.
+                                                </div>
+                                                break;
+
+                                            case "TimeExpired":
+                                                <div class="alert alert-danger mt-2">
+                                                    مهلت استفاده از این کد تخفیف به اتمام رسیده است.
+                                                </div>
+                                                break;
+
+                                            case "UserUsed":
+                                                <div class="alert alert-warning mt-2">
+                                                    این کد قبلا توسط شما اعمال شده است.
+                                                </div>
+                                                break;
+
+                                            default:
+                                                break;
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                            <tr>
+                                <td colspan="3" class="text-end">
+                                    قیمت کل:
+                                </td>
+                                <td><span class="text-success fw-bold ms-1">@orderSum.ToString("#,0 تومان")</span></td>
+                            </tr>
+                            @if (!Model.IsFinally)
+                            {
+                                <tr>
+                                    <td colspan="2" class="text-end"></td>
+                                    <td colspan="2">
+                                        @if (_walletService.GetUserBalance(userId) >= orderSum)
+                                        {
+                                            <a class="btn btn-success btn-block w-100" asp-area="UserPanel" asp-controller="Order" asp-action="FinalOrder" asp-route-id="@Model.OrderId">تایید فاکتور</a>
+                                        }
+                                        else
+                                        {
+                                            <a class="btn btn-success btn-block w-100 disabled">تایید فاکتور</a>
+                                            <div class="alert alert-danger mt-2">
+                                                موجودی کیف پول شما کافی نمی‌باشد! لطفا از طریق این
+                                                <a asp-area="UserPanel" asp-controller="Wallet" asp-action="Index">لینک</a>
+                                                اقدام به شارژ کیف پول خود کنید.
+                                            </div>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

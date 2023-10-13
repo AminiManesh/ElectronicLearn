@@ -39,8 +39,8 @@ namespace ElectronicLearn.Web.Controllers
         public IActionResult BuyCourse(int id)
         {
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
-            _orderService.AddOrder(userId, id);
-            return Redirect("/ShowCourse/" + id);
+            int orderId = _orderService.AddOrder(userId, id);
+            return Redirect("/UserPanel/Order/ShowOrder/" + orderId);
         }
     }
 }

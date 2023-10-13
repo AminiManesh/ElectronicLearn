@@ -1,0 +1,49 @@
+﻿@page
+@using ElectronicLearn.Core.Convertors
+@model ElectronicLearn.Web.Pages.Admin.Discounts.DeleteDiscountModel
+@{
+    ViewData["Title"] = "حذف کد تخفیف";
+}
+
+
+<div class="panel panel-danger">
+    <div class="panel-heading">مشخصات کد تخفیف</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col col-12 col-md-6 col-lg-8">
+                <div>
+                    <label>کد تخفیف: </label>
+                    <span>@Model.Discount.DiscountCode</span>
+                </div>
+                <div>
+                    <label>درصد تخفیف: </label>
+                    <span>@Model.Discount.Percent</span>
+                </div>
+                <div>
+                    <label>تعداد: </label>
+                    <span>@Model.Discount.UsableCount</span>
+                </div>
+                <div>
+                    <label>تاریخ شروع: </label>
+                    <span>@Model.Discount.StartTime?.ToLongShamsi()</span>
+                </div>
+                <div>
+                    <label>تاریخ پایان: </label>
+                    <span>@Model.Discount.EndTime?.ToLongShamsi()</span>
+                </div>
+
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col col-sm-6">
+                        <a href="/Admin/Discounts" class="btn btn-default btn-large btn-block">بازگشت</a>
+                    </div>
+                    <div class="col col-sm-6">
+                        <form method="post">
+                            <input type="hidden" asp-for="Discount.DiscountId" />
+                            <button type="submit" class="btn btn-danger btn-large btn-block">حذف</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

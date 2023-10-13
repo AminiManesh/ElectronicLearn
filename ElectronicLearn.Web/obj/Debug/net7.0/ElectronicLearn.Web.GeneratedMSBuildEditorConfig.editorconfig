@@ -28,6 +28,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Areas/UserPanel/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXE9yZGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Areas/UserPanel/Views/Order/ShowOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXE9yZGVyXFNob3dPcmRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Areas/UserPanel/Views/Shared/_UserPanelSidebarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclBhbmVsXFZpZXdzXFNoYXJlZFxfVXNlclBhbmVsU2lkZWJhclBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +74,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Courses/IndexEpisode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ291cnNlc1xJbmRleEVwaXNvZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Discounts/CreateDiscount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGlzY291bnRzXENyZWF0ZURpc2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Discounts/DeleteDiscount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGlzY291bnRzXERlbGV0ZURpc2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Discounts/EditDiscount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGlzY291bnRzXEVkaXREaXNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Discounts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGlzY291bnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Groups/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cR3JvdXBzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/ProgrammingFiles/ElectronicLearn/ElectronicLearn.Web/Pages/Admin/Index.cshtml]
