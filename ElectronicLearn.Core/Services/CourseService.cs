@@ -161,6 +161,11 @@ namespace ElectronicLearn.Core.Services
                 }).ToList();
         }
 
+        public List<CourseGroup> GetAllParentGroups()
+        {
+            return _context.CourseGroups.Where(g => g.ParentId == null).ToList();
+        }
+
         public List<SelectListItem> GetAllParentGroupsForManageCourse()
         {
             return _context.CourseGroups
@@ -311,6 +316,11 @@ namespace ElectronicLearn.Core.Services
         public bool IsFileExists(IFormFile file, string folderPath)
         {
             return FileTools.IsFileExists(file, folderPath);
+        }
+
+        public bool IsUserHasCourse(int userId, int courseId)
+        {
+            return _context.UsersCourses.Any(uc => uc.UserId == userId && uc.CourseId == courseId);
         }
 
         // Update and edit course from admin panel

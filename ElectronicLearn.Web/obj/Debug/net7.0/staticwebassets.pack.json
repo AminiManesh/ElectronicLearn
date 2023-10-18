@@ -1,12 +1,44 @@
 {
   "Files": [
     {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\128b42acf1cf4c1885afabad558e5d7a.JPG",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\128b42acf1cf4c1885afabad558e5d7a.JPG"
+    },
+    {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\13b4f88698224c50afa791b2d050d5a9.rar",
       "PackagePath": "staticwebassets\\Courses\\Demoes\\13b4f88698224c50afa791b2d050d5a9.rar"
     },
     {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\1950ce464cb947cfacca329f84748d55.JPG",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\1950ce464cb947cfacca329f84748d55.JPG"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\240bf31f22ee4f29afc2965446ebec78.JPG",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\240bf31f22ee4f29afc2965446ebec78.JPG"
+    },
+    {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\46da50b908ad496db26deb95b242a603.rar",
       "PackagePath": "staticwebassets\\Courses\\Demoes\\46da50b908ad496db26deb95b242a603.rar"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\8a6751af21fa489897786099dcc3ba2f.JPG",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\8a6751af21fa489897786099dcc3ba2f.JPG"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\b5f9519b8bcd4489a060e3c4ff5199db.JPG",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\b5f9519b8bcd4489a060e3c4ff5199db.JPG"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\ba81a740df2f4da5b78731c6f4f2ae47.JPG",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\ba81a740df2f4da5b78731c6f4f2ae47.JPG"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\c2cbe19e586a4296a012cb7d9b671c63.JPG",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\c2cbe19e586a4296a012cb7d9b671c63.JPG"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Demoes\\cef0cc9a13974715b677027d03975dd1.JPG",
+      "PackagePath": "staticwebassets\\Courses\\Demoes\\cef0cc9a13974715b677027d03975dd1.JPG"
     },
     {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Episodes\\19\\قسمت 1.rar",
@@ -25,8 +57,28 @@
       "PackagePath": "staticwebassets\\Courses\\Image\\0b4b3b2d7b0149e78477214e7e0c0ded.jpg"
     },
     {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\203f5f50f4ea45e08324bbc3ab5e0475.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\203f5f50f4ea45e08324bbc3ab5e0475.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\2575e27322c94698883916e27158fd61.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\2575e27322c94698883916e27158fd61.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\2762195cbe6c43988fd7e9deaa5bbc88.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\2762195cbe6c43988fd7e9deaa5bbc88.jpg"
+    },
+    {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\32ccd8baeffd400eabedcf6e77a8168e.jpg",
       "PackagePath": "staticwebassets\\Courses\\Image\\32ccd8baeffd400eabedcf6e77a8168e.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\47a29ee91db64b16bcddc6eb1b8da933.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\47a29ee91db64b16bcddc6eb1b8da933.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\489a704ea90d4a299ef10ef4bb93811d.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\489a704ea90d4a299ef10ef4bb93811d.jpg"
     },
     {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\4a7a4f9eea2643c1b9cb1501c0a12308.jpg",
@@ -37,8 +89,24 @@
       "PackagePath": "staticwebassets\\Courses\\Image\\53b7a35f15bc401bb38cae67d5367fdb.jpg"
     },
     {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\5da86adc2a4145fcae801b01fe6d899e.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\5da86adc2a4145fcae801b01fe6d899e.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\74b01d865efa49768dc3836baf07e932.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\74b01d865efa49768dc3836baf07e932.jpg"
+    },
+    {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\e4388cd450594f64b1ae5a81fb805bd6.jpg",
       "PackagePath": "staticwebassets\\Courses\\Image\\e4388cd450594f64b1ae5a81fb805bd6.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\e784c4e671664e8fb3ea151847a117e8.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\e784c4e671664e8fb3ea151847a117e8.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\f5eea8c65d6445239e959fa1f59079dc.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Image\\f5eea8c65d6445239e959fa1f59079dc.jpg"
     },
     {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Image\\no-image.jpg",
@@ -49,8 +117,28 @@
       "PackagePath": "staticwebassets\\Courses\\Thumbnail\\0b4b3b2d7b0149e78477214e7e0c0ded.jpg"
     },
     {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\203f5f50f4ea45e08324bbc3ab5e0475.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\203f5f50f4ea45e08324bbc3ab5e0475.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\2575e27322c94698883916e27158fd61.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\2575e27322c94698883916e27158fd61.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\2762195cbe6c43988fd7e9deaa5bbc88.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\2762195cbe6c43988fd7e9deaa5bbc88.jpg"
+    },
+    {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\32ccd8baeffd400eabedcf6e77a8168e.jpg",
       "PackagePath": "staticwebassets\\Courses\\Thumbnail\\32ccd8baeffd400eabedcf6e77a8168e.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\47a29ee91db64b16bcddc6eb1b8da933.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\47a29ee91db64b16bcddc6eb1b8da933.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\489a704ea90d4a299ef10ef4bb93811d.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\489a704ea90d4a299ef10ef4bb93811d.jpg"
     },
     {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\4a7a4f9eea2643c1b9cb1501c0a12308.jpg",
@@ -61,8 +149,24 @@
       "PackagePath": "staticwebassets\\Courses\\Thumbnail\\53b7a35f15bc401bb38cae67d5367fdb.jpg"
     },
     {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\5da86adc2a4145fcae801b01fe6d899e.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\5da86adc2a4145fcae801b01fe6d899e.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\74b01d865efa49768dc3836baf07e932.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\74b01d865efa49768dc3836baf07e932.jpg"
+    },
+    {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\e4388cd450594f64b1ae5a81fb805bd6.jpg",
       "PackagePath": "staticwebassets\\Courses\\Thumbnail\\e4388cd450594f64b1ae5a81fb805bd6.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\e784c4e671664e8fb3ea151847a117e8.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\e784c4e671664e8fb3ea151847a117e8.jpg"
+    },
+    {
+      "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\f5eea8c65d6445239e959fa1f59079dc.jpg",
+      "PackagePath": "staticwebassets\\Courses\\Thumbnail\\f5eea8c65d6445239e959fa1f59079dc.jpg"
     },
     {
       "Id": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Web\\wwwroot\\Courses\\Thumbnail\\no-image.jpg",

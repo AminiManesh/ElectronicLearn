@@ -193,6 +193,11 @@ namespace ElectronicLearn.Core.Services
                 .Where(o => o.UserId == userId).ToList();
         }
 
+        public bool IsCodeExists(string discountCode)
+        {
+            return _context.Discounts.Any(d => d.DiscountCode == discountCode);
+        }
+
         public void RemoveDiscount(Discount discount)
         {
             _context.Discounts.Remove(discount);

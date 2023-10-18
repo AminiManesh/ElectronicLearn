@@ -15,6 +15,7 @@ namespace ElectronicLearn.Core.Services.Interfaces
         #region Group
         List<CourseGroup> GetAllCourseGroups();
         List<SelectListItem> GetAllParentGroupsForManageCourse();
+        List<CourseGroup> GetAllParentGroups();
         List<SelectListItem> GetAllSubGroupsForManageCourse(int parentId);
         List<SelectListItem> GetAllCourseStatuses();
         List<SelectListItem> GetAllCourseLevels();
@@ -22,6 +23,7 @@ namespace ElectronicLearn.Core.Services.Interfaces
 
 
         #region Course
+        bool IsUserHasCourse(int userId, int courseId);
         AdminCourseListViewModel GetAllCoursesForAdmin(int pageId = 1, int groupId = 0, int subGroupId = 0, string courseName = "");
         int AddCourse(Course course, IFormFile demoVideo, IFormFile courseImage);
         Course GetCourseById(int courseId);

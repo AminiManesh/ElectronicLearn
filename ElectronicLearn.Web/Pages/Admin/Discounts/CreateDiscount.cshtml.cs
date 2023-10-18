@@ -24,13 +24,18 @@ namespace ElectronicLearn.Web.Pages.Admin.Discounts
         {
             ModelState.ClearValidationState("Discount.UsersDiscounts");
             ModelState.MarkFieldValid("Discount.UsersDiscounts");
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || _orderService.IsCodeExists(Discount.DiscountCode))
             {
                 return Page();
             }
 
             _orderService.AddDiscount(Discount);
             return RedirectToPage("Index");
+        }
+
+        public IActionResult OnGetCheckCode(string code)
+        {
+            return Content(_orderService.IsCodeExists(code).ToString());
         }
     }
 }

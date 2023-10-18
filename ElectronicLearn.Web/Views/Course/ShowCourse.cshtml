@@ -1,5 +1,7 @@
 ﻿@using ElectronicLearn.Core.Convertors;
+@using System.Security.Claims;
 @model ElectronicLearn.DataLayer.Entities.Course.Course;
+@inject ElectronicLearn.Core.Services.Interfaces.ICourseService _courseService
 @{
     ViewData["Title"] = Model.CourseTitle;
 }
@@ -177,14 +179,21 @@
                         <span> تعداد دانشجوها </span>
                         <i> 52 نفر </i>
                     </li>
+                    <div class="clearfix"></div>
                 </ul>
-                @if (true)
-                {
-                    
+                @{
+                    int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
                 }
-                @if (Model.CoursePrice != 0)
+                @if (!_courseService.IsUserHasCourse(userId, Model.CourseId))
                 {
-                    <a asp-controller="Course" asp-action="BuyCourse" asp-route-id="@Model.CourseId"> شرکت در دوره : @Model.CoursePrice.ToString("#,0") تومان </a>
+                    @if (Model.CoursePrice != 0)
+                    {
+                        <a asp-controller="Course" asp-action="BuyCourse" asp-route-id="@Model.CourseId"> شرکت در دوره : @Model.CoursePrice.ToString("#,0") تومان </a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Course" asp-action="BuyCourse" asp-route-id="@Model.CourseId"> شرکت در دوره (رایگان) </a>
+                    }
                 }
             </div>
 

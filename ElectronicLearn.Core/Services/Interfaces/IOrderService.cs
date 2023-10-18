@@ -26,6 +26,7 @@ namespace ElectronicLearn.Core.Services.Interfaces
         int UpdateDiscount(Discount discount);
         void RemoveDiscount(int discountId);
         void RemoveDiscount(Discount discount);
+        bool IsCodeExists(string discountCode);
         #endregion
     }
 }
