@@ -25,6 +25,13 @@ namespace ElectronicLearn.Core.Services
         {
             _context = context;
         }
+
+        public void AddComment(CourseComment comment)
+        {
+            _context.CourseComments.Add(comment);
+            _context.SaveChanges();
+        }
+
         // Add course from admin panel
         public int AddCourse(Course course, IFormFile demoVideo, IFormFile courseImage)
         {
@@ -193,6 +200,14 @@ namespace ElectronicLearn.Core.Services
             return _context.Courses.Find(courseId);
         }
 
+        public Tuple<List<CourseComment>, int> GetCourseComments(int courseId, int pageId = 1)
+        {
+            var take = 5;
+            var skip = (pageId - 1) * take;
+            var pageCount = _context.CourseComments.Count(c => !c.IsDeleted && c.CourseId == courseId) / take;
+            return Tuple.Create(_context.CourseComments.Include(c => c.User).Where(c => !c.IsDeleted && c.CourseId == courseId).OrderByDescending(c => c.CreateDate).Skip(skip).Take(take).ToList(), pageCount);
+        }
+
         public Course GetCourseDetails(int courseId)
         {
             return _context.Courses
@@ -200,6 +215,7 @@ namespace ElectronicLearn.Core.Services
                 .Include(c => c.CourseLevel)
                 .Include(c => c.CourseStatus)
                 .Include(c => c.Teacher)
+                .Include(c => c.UsersCourses)
                 .FirstOrDefault(c => c.CourseId == courseId);
         }
 
@@ -296,6 +312,11 @@ namespace ElectronicLearn.Core.Services
                 }).ToList();
 
             return Tuple.Create(query, pageCount);
+        }
+
+        public CourseEpisode GetEpisodeById(int episodeId)
+        {
+            return _context.CourseEpisodes.Find(episodeId);
         }
 
         public AdminEpisodeViewModel GetEpisodeForEdit(int episodeId)

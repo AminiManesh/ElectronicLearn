@@ -59,6 +59,10 @@
     {
       "library": "jquery-validate@1.19.5",
       "destination": "wwwroot/lib/jquery-validate/"
+    },
+    {
+      "library": "jquery-ajax-unobtrusive@3.2.6",
+      "destination": "wwwroot/lib/jquery-ajax-unobtrusive/"
     }
   ]
 }

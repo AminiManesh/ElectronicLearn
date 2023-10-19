@@ -63,6 +63,7 @@ namespace ElectronicLearn.DataLayer.Entities.User
         public virtual List<Order.Order> Orders { get; set; }
         public virtual List<UserCourse> UsersCourses { get; set; }
         public virtual List<UserDiscount> UsersDiscounts { get; set; }
+        public virtual List<CourseComment> CourseComments { get; set; }
         #endregion
     }
 }

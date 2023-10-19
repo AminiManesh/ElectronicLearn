@@ -4,6 +4,12 @@
 @inject ElectronicLearn.Core.Services.Interfaces.ICourseService _courseService
 @{
     ViewData["Title"] = Model.CourseTitle;
+    int userId = 0;
+    if (User.FindFirstValue(ClaimTypes.NameIdentifier) != null)
+    {
+        userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
+    }
+    bool IsUserHasCourse = _courseService.IsUserHasCourse(userId, Model.CourseId);
 }
 
 <section class="term-content">
@@ -24,7 +30,20 @@
                     @foreach (var episode in Model.CourseEpisodes)
                     {
                         <li>
-                            <h3> @episode.CourseEpisodeTitle </h3>
+                            @if (episode.IsFree || IsUserHasCourse)
+                            {
+                                <h3>
+                                    <a href="/DownloadEpisode/@episode.CourseEpisodeId">
+                                        @episode.CourseEpisodeTitle
+                                    </a>
+                                </h3>
+                            }
+                            else
+                            {
+                                <h3>
+                                    @episode.CourseEpisodeTitle
+                                </h3>
+                            }
                             @if (episode.IsFree)
                             {
                                 <i> رایگان </i>
@@ -42,120 +61,37 @@
             <section class="user-comments">
                 <header><h3> نظرات کاربران </h3></header>
                 <div class="inner">
-                    <form>
-                        <div class="row">
-                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="نام و نام خانوادگی">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="ایمیل">
-                                </div>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="شماره تماس">
-                                </div>
-                            </div>
-                            <div class="col-md-8 col-sm-12 col-xs-12">
-                                <div class="input-group mb-3">
-                                    <textarea class="form-control" placeholder="متن نظر"></textarea>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-8 col-sm-7 col-xs-7">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="کد امنیتی">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-5 col-xs-5">
-                                        <img src="/img/captcha.jpg">
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <form asp-controller="Course" asp-action="PostComment"
+                          data-ajax="true"
+                          data-ajax-method="post"
+                          data-ajax-mode="replace"
+                          data-ajax-update="#commentList"
+                          data-ajax-success="Success">
+                            <input type="hidden" name="comment.CourseId" value="@Model.CourseId" />
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="input-group mb-3">
+                                        <textarea class="form-control" id="comment_Comment" name="comment.Comment" placeholder="متن نظر"></textarea>
                                     </div>
                                 </div>
+                                <div class="col-xs-12">
+                                    <button type="submit" class="btn btn-success"> ثبت دیدگاه </button>
+                                </div>
                             </div>
-                            <div class="col-xs-12">
-                                <button type="submit" class="btn btn-success"> ثبت دیدگاه </button>
-                            </div>
+                        </form>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info">
+                            برای ثبت نظر می‌بایست وارد حساب کاربری خود شوید.
+                            <a asp-area="" asp-controller="Account" asp-action="Login">ورود به حساب کاربری</a>
                         </div>
-                    </form>
+                    }
 
-                    <div class="comment-list">
-                        <!-- row -->
-                        <div class="comment-row">
-                            <img src="/img/UserAvatars/avatar.jpg">
-                            <div class="left-col">
-                                <h3> میترا رحیمی </h3>
-                                <span>12/03/1397</span>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                                </p>
-                            </div>
-                        </div>
-                        <!-- /row -->
-                        <!-- row -->
-                        <div class="comment-row">
-                            <img src="/img/UserAvatars/avatar.jpg">
-                            <div class="left-col">
-                                <h3> میترا رحیمی </h3>
-                                <span>12/03/1397</span>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                                </p>
-                            </div>
-                        </div>
-                        <!-- /row -->
-                        <!-- row -->
-                        <div class="comment-row">
-                            <img src="/img/UserAvatars/avatar.jpg">
-                            <div class="left-col">
-                                <h3> میترا رحیمی </h3>
-                                <span>12/03/1397</span>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                                </p>
-                            </div>
-                        </div>
-                        <!-- /row -->
-                        <!-- row -->
-                        <div class="comment-row">
-                            <img src="/img/UserAvatars/avatar.jpg">
-                            <div class="left-col">
-                                <h3> میترا رحیمی </h3>
-                                <span>12/03/1397</span>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                                </p>
-                            </div>
-                        </div>
-                        <!-- /row -->
-                        <!-- row -->
-                        <div class="comment-row">
-                            <img src="/img/UserAvatars/avatar.jpg">
-                            <div class="left-col">
-                                <h3> میترا رحیمی </h3>
-                                <span>12/03/1397</span>
-                                <p>
-                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
-                                </p>
-                            </div>
-                        </div>
-                        <!-- /row -->
-
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true"><i class="zmdi zmdi-chevron-right"></i></span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true"><i class="zmdi zmdi-chevron-left"></i></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-
+                    <div class="comment-list" id="commentList">
                     </div>
                 </div>
             </section>
@@ -177,14 +113,11 @@
                     </li>
                     <li>
                         <span> تعداد دانشجوها </span>
-                        <i> 52 نفر </i>
+                        <i> @Model.UsersCourses.Count نفر </i>
                     </li>
                     <div class="clearfix"></div>
                 </ul>
-                @{
-                    int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
-                }
-                @if (!_courseService.IsUserHasCourse(userId, Model.CourseId))
+                @if (!IsUserHasCourse)
                 {
                     @if (Model.CoursePrice != 0)
                     {
@@ -245,3 +178,16 @@
         </aside>
     </div>
 </section>
+
+@section Scripts{
+    <script src="/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>
+    <script>
+        function Success() {
+            $("#comment_Comment").val("");
+        }
+
+        $(function() {
+            $("#commentList").load("/Course/GetComments/" + @Model.CourseId);
+        });
+    </script>
+}

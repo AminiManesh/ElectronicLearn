@@ -1,4 +1,5 @@
 ﻿using ElectronicLearn.Core.Services.Interfaces;
+using ElectronicLearn.DataLayer.Entities.Course;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -41,6 +42,49 @@ namespace ElectronicLearn.Web.Controllers
             var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
             int orderId = _orderService.AddOrder(userId, id);
             return Redirect("/UserPanel/Order/ShowOrder/" + orderId);
+        }
+
+        [Authorize]
+        [Route("DownloadEpisode/{episodeId}")]
+        public IActionResult DownloadEpisode(int episodeId)
+        {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
+            var episode = _courseService.GetEpisodeById(episodeId);
+            var episodeFilePath = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/Courses/Episodes/{episode.CourseId}/{episode.EpisodeFileName}");
+
+            if (episode.IsFree)
+            {
+                byte[] file = System.IO.File.ReadAllBytes(episodeFilePath);
+                return File(file, "application/force-download", episode.EpisodeFileName);
+            }
+
+            if (User.Identity.IsAuthenticated)
+            {
+                if (_courseService.IsUserHasCourse(userId, episode.CourseId))
+                {
+                    byte[] file = System.IO.File.ReadAllBytes(episodeFilePath);
+                    return File(file, "application/force-download", episode.EpisodeFileName);
+                }
+            }
+
+            return Forbid();
+        }
+
+        [HttpPost]
+        public IActionResult PostComment(CourseComment comment)
+        {
+            comment.IsDeleted = false;
+            comment.CreateDate = DateTime.Now;
+            comment.IsAdminRed = false;
+            comment.UserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
+            _courseService.AddComment(comment);
+
+            return View("GetComments", _courseService.GetCourseComments(comment.CourseId));
+        }
+
+        public IActionResult GetComments(int id, int pageId = 1)
+        {
+            return View(_courseService.GetCourseComments(id, pageId));
         }
     }
 }

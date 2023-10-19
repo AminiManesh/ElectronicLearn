@@ -147,7 +147,7 @@ namespace ElectronicLearn.Core.Services
 
                 foreach (var item in order.OrderItems)
                 {
-                    if (_context.UsersCourses.Any(uc => uc.UserId == userId && uc.CourseId == item.CourseId))
+                    if (!_context.UsersCourses.Any(uc => uc.UserId == userId && uc.CourseId == item.CourseId))
                     {
                         _context.UsersCourses.Add(new UserCourse()
                         {
