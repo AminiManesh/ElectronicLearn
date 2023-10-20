@@ -36,7 +36,7 @@ namespace ElectronicLearn.Core.Security
                         return;
                     }
 
-                    context.Result = new RedirectResult("/Login");
+                    context.Result = new RedirectResult("/Login" + context.HttpContext.Request.Path);
                 }
             }
             else

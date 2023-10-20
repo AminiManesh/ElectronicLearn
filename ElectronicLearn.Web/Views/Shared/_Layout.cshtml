@@ -31,7 +31,10 @@
                             @if (User.Identity.IsAuthenticated)
                             {
                                 <div class="loggein">
-                                    <i class="zmdi zmdi-account"></i><a asp-area="UserPanel" asp-action="Index" asp-controller="Home"> @User.Identity.Name ، خوش آمدی </a>
+                                    <i class="zmdi zmdi-account"></i>
+                                    <a asp-area="UserPanel" asp-action="Index" asp-controller="Home"> @User.Identity.Name ، خوش آمدی </a>
+                                    <span> / </span>
+                                    <a asp-area="" asp-controller="Account" asp-action="Logout">خروج</a>
                                 </div>
                             }
                             else
@@ -51,7 +54,7 @@
     </div>
 
     <!-- main manu -->
-    @await Component.InvokeAsync("CourseGroupsComponent");
+    @await Component.InvokeAsync("CourseGroupsComponent")
     <!-- /main manu -->
     <!-- content -->
     <main>

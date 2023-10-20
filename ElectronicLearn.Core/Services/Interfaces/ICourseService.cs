@@ -30,6 +30,7 @@ namespace ElectronicLearn.Core.Services.Interfaces
         Course GetCourseDetails(int courseId);
         void UpdateCourse(Course course, IFormFile demoVideo, IFormFile courseImage);
         Tuple<List<CourseListItemViewModel>, int> GetCourses(int pageId = 1, string filter = "", string priceType = "all", string orderBy = "createDate", int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null, int take = 0);
+        List<CourseListItemViewModel> GetPopularCourses();
         #endregion
 
 

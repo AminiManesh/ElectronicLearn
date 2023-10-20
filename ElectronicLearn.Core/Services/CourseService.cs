@@ -204,7 +204,14 @@ namespace ElectronicLearn.Core.Services
         {
             var take = 5;
             var skip = (pageId - 1) * take;
-            var pageCount = _context.CourseComments.Count(c => !c.IsDeleted && c.CourseId == courseId) / take;
+            var count = _context.CourseComments.Count(c => !c.IsDeleted && c.CourseId == courseId);
+            var pageCount = count / take;
+
+            if ((count % take) != 0)
+            {
+                pageCount++;
+            }
+
             return Tuple.Create(_context.CourseComments.Include(c => c.User).Where(c => !c.IsDeleted && c.CourseId == courseId).OrderByDescending(c => c.CreateDate).Skip(skip).Take(take).ToList(), pageCount);
         }
 
@@ -331,6 +338,23 @@ namespace ElectronicLearn.Core.Services
                     EpisodeTime = e.EpisodeTime,
                     IsFree = e.IsFree
                 }).Single();
+        }
+
+        public List<CourseListItemViewModel> GetPopularCourses()
+        {
+            return _context.Courses
+                .Include(c => c.UsersCourses)
+                .OrderByDescending(c => c.UsersCourses.Count())
+                .Take(8)
+                .Include(c => c.CourseEpisodes)
+                .Select(c => new CourseListItemViewModel()
+                {
+                    CourseId= c.CourseId,
+                    ImageName = c.CourseImageName,
+                    Price= c.CoursePrice,
+                    Title= c.CourseTitle,
+                    TotalTime = new TimeSpan(c.CourseEpisodes.Sum(e => e.EpisodeTime.Hours), c.CourseEpisodes.Sum(e => e.EpisodeTime.Minutes), c.CourseEpisodes.Sum(e => e.EpisodeTime.Seconds))
+                }).ToList();
         }
 
         // Check the file is exits or not

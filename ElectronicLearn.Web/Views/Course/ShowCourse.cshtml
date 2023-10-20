@@ -186,8 +186,12 @@
             $("#comment_Comment").val("");
         }
 
-        $(function() {
+        $(function () {
             $("#commentList").load("/Course/GetComments/" + @Model.CourseId);
         });
+
+        function CommentPage(pageId) {
+            $("#commentList").load("/Course/GetComments/" + @Model.CourseId + "?pageId=" + pageId);
+        }
     </script>
 }
