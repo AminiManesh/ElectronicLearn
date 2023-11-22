@@ -89,7 +89,9 @@ namespace ElectronicLearn.Core.Services
 
         public List<CourseGroup> GetAllCourseGroups()
         {
-            return _context.CourseGroups.ToList();
+            return _context.CourseGroups
+                .Include(g => g.CourseGroups)
+                .ToList();
         }
 
         public List<SelectListItem> GetAllCourseLevels()
@@ -183,7 +185,7 @@ namespace ElectronicLearn.Core.Services
                     Value = g.CourseGroupId.ToString()
                 }).ToList();
         }
-
+        
         public List<SelectListItem> GetAllSubGroupsForManageCourse(int parentId)
         {
             return _context.CourseGroups
@@ -344,6 +346,7 @@ namespace ElectronicLearn.Core.Services
         {
             return _context.Courses
                 .Include(c => c.UsersCourses)
+                .Where(c => c.UsersCourses.Any())
                 .OrderByDescending(c => c.UsersCourses.Count())
                 .Take(8)
                 .Include(c => c.CourseEpisodes)

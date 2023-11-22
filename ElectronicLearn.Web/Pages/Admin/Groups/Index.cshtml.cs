@@ -17,7 +17,7 @@ namespace ElectronicLearn.Web.Pages.Admin.Groups
 
         public void OnGet()
         {
-            CourseGroups = _courseService.GetAllParentGroups();
+            CourseGroups = _courseService.GetAllCourseGroups();
         }
     }
 }

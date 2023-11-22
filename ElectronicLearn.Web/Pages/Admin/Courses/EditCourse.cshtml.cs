@@ -1,4 +1,4 @@
-using ElectronicLearn.Core.Services.Interfaces;
+﻿using ElectronicLearn.Core.Services.Interfaces;
 using ElectronicLearn.DataLayer.Entities.Course;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -26,8 +26,21 @@ namespace ElectronicLearn.Web.Pages.Admin.Courses
             var parentGroups = _courseService.GetAllParentGroupsForManageCourse();
             ViewData["ParentGroups"] = new SelectList(parentGroups, "Value", "Text", Course.GroupId);
 
-            var subGroups = _courseService.GetAllSubGroupsForManageCourse(int.Parse(parentGroups.First().Value));
-            ViewData["SubGroups"] = new SelectList(subGroups, "Value", "Text", Course.SubGroupId);
+            List<SelectListItem> subGroups = new List<SelectListItem>()
+            {
+                new SelectListItem()
+                {
+                    Text = "انتخاب کنید...",
+                    Value = ""
+                }
+            };
+            subGroups.AddRange(_courseService.GetAllSubGroupsForManageCourse(Course.GroupId));
+            int selectedSubGroup = 0;
+            if (Course.SubGroupId != null)
+            {
+                selectedSubGroup = Course.SubGroupId.Value;
+            }
+            ViewData["SubGroups"] = new SelectList(subGroups, "Value", "Text", selectedSubGroup);
 
             var teacher = _userService.GetTeachers();
             ViewData["Teachers"] = new SelectList(teacher, "Value", "Text", Course.TeacherId);
@@ -43,8 +56,10 @@ namespace ElectronicLearn.Web.Pages.Admin.Courses
         {
             ModelState.ClearValidationState("Course.OrderItems");
             ModelState.ClearValidationState("Course.UsersCourses");
+            ModelState.ClearValidationState("Course.CourseComments");
             ModelState.MarkFieldValid("Course.OrderItems");
             ModelState.MarkFieldValid("Course.UsersCourses");
+            ModelState.MarkFieldValid("Course.CourseComments");
             if (!ModelState.IsValid)
             {
                 return Page();

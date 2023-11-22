@@ -12,6 +12,27 @@
     bool IsUserHasCourse = _courseService.IsUserHasCourse(userId, Model.CourseId);
 }
 
+@section MetaTags{
+    <meta name="description" content="دوره Asp.Net Core &amp;nbsp;پیشرفته به همراه پروژه عملی ( سایت تاپ لرن )&amp;nbsp;در این دوره به صورت پروزه محور سایتی شبیه همین سایت تاپ لرن را پیاده سازی خو">
+    <meta name="keywords" content="دوره core پیشرفته,آموزش core,آموزش asp core پیشرفته,پروژه asp core,آموزش asp.net core پیشرفته">
+    <meta property="og:site_name" value="خودآموز الکترونیک لرن">
+    <meta property="og:title" content="آموزش Asp.Net Core  پیشرفته">
+    <meta property="og:url" content="https://localhost:44377/ShowCourse/@Model.CourseId">
+    <meta property="og:image" content="/Courses/Image/@Model.CourseImageName">
+    <meta property="og:image:url" content="/Courses/Image/@Model.CourseImageName">
+    <meta property="og:image:width" content="700">
+    @*<meta property="og:image:height" content="500">*@
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:description" content="آموزش Asp.Net Core  پیشرفته">
+    <meta property="og:price:currency" content="IRR">
+    <meta property="og:locale" content="ir_FA">
+    <meta name="twitter:title" content="آموزش Asp.Net Core  پیشرفته">
+    <meta name="twitter:description" content="دوره Asp.Net Core &amp;nbsp;پیشرفته به همراه پروژه عملی ( سایت تاپ لرن )&amp;nbsp;در این دوره به صورت پروزه محور سایتی شبیه همین سایت تاپ لرن را پیاده سازی خو">
+    <meta name="twitter:image" content="/Courses/Image/@Model.CourseImageName">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="&lt;p>دوره Asp.Net Core &amp;nbsp;پیشرفته به همراه پروژه عملی ( سایت تاپ لرن )&lt;/p>&lt;p>&amp;nbsp;&lt;/p>&lt;p>در این دوره به صورت پروزه محور سایتی شبیه همین سایت تاپ لرن">
+}
+
 <section class="term-content">
     <header><h1> @Model.CourseTitle </h1></header>
     <div class="row">
@@ -158,7 +179,7 @@
 
             <div class="share-layer">
                 <span> به اشتراک گذاری </span>
-                <a href=""><i class="zmdi zmdi-facebook"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://ElectronicLearn.ir/ShowCourse/@Model.CourseId"><i class="zmdi zmdi-facebook"></i></a>
                 <a href=""><i class="zmdi zmdi-google-old"></i></a>
                 <a href=""><i class="zmdi zmdi-twitter"></i></a>
                 <a href=""><i class="zmdi zmdi-linkedin"></i></a>
