@@ -1,4 +1,28 @@
-﻿@page
+﻿@page "{groupId?}"
 @model ElectronicLearn.Web.Pages.Admin.Groups.CreateGroupModel
 @{
+    ViewData["Title"] = "افزودن گروه جدید";
 }
+
+<form method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col col-12 col-md-6 col-lg-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    گروه
+                </div>
+                <div class="panel-body">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <input type="hidden" asp-for="CourseGroup.ParentId" />
+                        <input type="text" class="form-control" asp-for="CourseGroup.CourseGroupTitle" placeholder="نام گروه">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-12 col-md-6 col-lg-4">
+            <button type="submit" class="btn btn-success btn-lg btn-block">افزودن گروه</button>
+        </div>
+    </div>
+</form>

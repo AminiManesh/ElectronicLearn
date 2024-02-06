@@ -1,3 +1,4 @@
+using ElectronicLearn.Core.Security;
 using ElectronicLearn.Core.Services.Interfaces;
 using ElectronicLearn.DataLayer.Entities.Course;
 using Microsoft.AspNetCore.Mvc;
@@ -5,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ElectronicLearn.Web.Pages.Admin.Groups
 {
+    [PermissionChecker(22)]
     public class IndexModel : PageModel
     {
         private readonly ICourseService _courseService;

@@ -1,0 +1,17 @@
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\bin\Release\net7.0\ElectronicLearn.Core.deps.json
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\bin\Release\net7.0\ElectronicLearn.Core.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\bin\Release\net7.0\ElectronicLearn.Core.pdb
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\bin\Release\net7.0\ElectronicLearn.DataLayer.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\bin\Release\net7.0\ElectronicLearn.DataLayer.pdb
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Release\net7.0\ElectronicLearn.Core.csproj.AssemblyReference.cache
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Release\net7.0\ElectronicLearn.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Release\net7.0\ElectronicLearn.Core.AssemblyInfoInputs.cache
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Release\net7.0\ElectronicLearn.Core.AssemblyInfo.cs
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Release\net7.0\ElectronicLearn.Core.csproj.CoreCompileInputs.cache
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Release\net7.0\ElectronicLearn.Core.csproj.CopyComplete
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Release\net7.0\ElectronicLearn.Core.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Release\net7.0\refint\ElectronicLearn.Core.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Release\net7.0\ElectronicLearn.Core.pdb
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Release\net7.0\ref\ElectronicLearn.Core.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\bin\Release\net7.0\ElectronicLearn.Core.runtimeconfig.json
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Release\net7.0\ElectronicLearn.Core.genruntimeconfig.cache

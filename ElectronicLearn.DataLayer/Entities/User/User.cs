@@ -1,4 +1,5 @@
 ﻿using ElectronicLearn.DataLayer.Entities.Course;
+using ElectronicLearn.DataLayer.Entities.Question;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -64,6 +65,9 @@ namespace ElectronicLearn.DataLayer.Entities.User
         public virtual List<UserCourse> UsersCourses { get; set; }
         public virtual List<UserDiscount> UsersDiscounts { get; set; }
         public virtual List<CourseComment> CourseComments { get; set; }
+        public virtual List<CourseVote> CourseVotes { get; set; }
+        public virtual List<Question.Question> Questions { get; set; }
+        public virtual List<Answer> Answers { get; set; }
         #endregion
     }
 }

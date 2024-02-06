@@ -87,6 +87,12 @@ namespace ElectronicLearn.Core.Services
             _context.SaveChanges();
         }
 
+        public void AddGroup(CourseGroup group)
+        {
+            _context.CourseGroups.Add(group);
+            _context.SaveChanges();
+        }
+
         public List<CourseGroup> GetAllCourseGroups()
         {
             return _context.CourseGroups
@@ -185,7 +191,7 @@ namespace ElectronicLearn.Core.Services
                     Value = g.CourseGroupId.ToString()
                 }).ToList();
         }
-        
+
         public List<SelectListItem> GetAllSubGroupsForManageCourse(int parentId)
         {
             return _context.CourseGroups
@@ -247,6 +253,11 @@ namespace ElectronicLearn.Core.Services
             return result;
         }
 
+        public string GetCourseNameById(int courseId)
+        {
+            return _context.Courses.Find(courseId).CourseTitle;
+        }
+
         public Tuple<List<CourseListItemViewModel>, int> GetCourses(int pageId = 1, string filter = "", string priceType = "all", string orderBy = "createDate", int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null, int take = 0)
         {
             if (take == 0)
@@ -290,11 +301,6 @@ namespace ElectronicLearn.Core.Services
             if (endPrice != 0)
                 result = result.Where(c => c.CoursePrice <= endPrice);
 
-            if (selectedGroups != null && selectedGroups.Any())
-            {
-
-            }
-
             int skip = (pageId - 1) * take;
             var count = result.Count();
             var pageCount = 0;
@@ -305,6 +311,11 @@ namespace ElectronicLearn.Core.Services
             else if (count % take > 0)
             {
                 pageCount = (count / take) + 1;
+            }
+
+            if (selectedGroups != null && selectedGroups.Any())
+            {
+                result = result.Where(c => selectedGroups.Contains(c.GroupId) || selectedGroups.Contains(c.SubGroupId.Value));
             }
 
             var query = result
@@ -321,6 +332,12 @@ namespace ElectronicLearn.Core.Services
                 }).ToList();
 
             return Tuple.Create(query, pageCount);
+        }
+
+        public Tuple<int, int> GetCourseVotes(int courseId)
+        {
+            var votes = _context.CourseVotes.Where(cv => cv.CourseId == courseId).Select(cv => cv.Vote).ToList();
+            return Tuple.Create(votes.Count(v => v), votes.Count(v => !v));
         }
 
         public CourseEpisode GetEpisodeById(int episodeId)
@@ -342,6 +359,11 @@ namespace ElectronicLearn.Core.Services
                 }).Single();
         }
 
+        public CourseGroup GetGroupById(int groupId)
+        {
+            return _context.CourseGroups.Find(groupId);
+        }
+
         public List<CourseListItemViewModel> GetPopularCourses()
         {
             return _context.Courses
@@ -352,10 +374,10 @@ namespace ElectronicLearn.Core.Services
                 .Include(c => c.CourseEpisodes)
                 .Select(c => new CourseListItemViewModel()
                 {
-                    CourseId= c.CourseId,
+                    CourseId = c.CourseId,
                     ImageName = c.CourseImageName,
-                    Price= c.CoursePrice,
-                    Title= c.CourseTitle,
+                    Price = c.CoursePrice,
+                    Title = c.CourseTitle,
                     TotalTime = new TimeSpan(c.CourseEpisodes.Sum(e => e.EpisodeTime.Hours), c.CourseEpisodes.Sum(e => e.EpisodeTime.Minutes), c.CourseEpisodes.Sum(e => e.EpisodeTime.Seconds))
                 }).ToList();
         }
@@ -369,6 +391,39 @@ namespace ElectronicLearn.Core.Services
         public bool IsUserHasCourse(int userId, int courseId)
         {
             return _context.UsersCourses.Any(uc => uc.UserId == userId && uc.CourseId == courseId);
+        }
+
+        public int SumbitVote(int userId, int courseId, bool userVote)
+        {
+            var UserVote = _context.CourseVotes.FirstOrDefault(cv => cv.UserId == userId && cv.CourseId == courseId);
+            if (UserVote != null)
+            {
+                if (userVote == UserVote.Vote)
+                {
+                    // Already Voted
+                    return 2;
+                }
+                else
+                {
+                    UserVote.Vote = userVote;
+                    _context.SaveChanges();
+                    // Change Vote
+                    return 1;
+                }
+            }
+            else
+            {
+                _context.CourseVotes.Add(new CourseVote()
+                {
+                    CourseId = courseId,
+                    UserId = userId,
+                    Vote = userVote
+                });
+
+                _context.SaveChanges();
+                // Add New Vote
+                return 0;
+            }
         }
 
         // Update and edit course from admin panel
@@ -423,6 +478,12 @@ namespace ElectronicLearn.Core.Services
             }
 
             _context.Update(updateEpisode);
+            _context.SaveChanges();
+        }
+
+        public void UpdateGroup(CourseGroup group)
+        {
+            _context.CourseGroups.Update(group);
             _context.SaveChanges();
         }
     }

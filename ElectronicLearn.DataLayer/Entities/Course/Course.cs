@@ -79,6 +79,8 @@ namespace ElectronicLearn.DataLayer.Entities.Course
         public virtual List<OrderItem> OrderItems { get; set; }
         public virtual List<UserCourse> UsersCourses { get; set; }
         public virtual List<CourseComment> CourseComments { get; set; }
+        public virtual List<CourseVote> CourseVotes { get; set; }
+        public virtual List<Question.Question> Questions { get; set; }
         #endregion
     }
 }

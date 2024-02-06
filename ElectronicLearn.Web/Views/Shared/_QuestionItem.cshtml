@@ -1,0 +1,24 @@
+﻿@using ElectronicLearn.Core.Convertors;
+@using ElectronicLearn.Core.DTOs;
+@model QuestionListItemViewModel
+
+<div class="question-item">
+    <div class="question-item-user">
+        <img class="img-fluid" src="/img/UserAvatars/@Model.User.Avatar" />
+        <h4 class="question-item-username">@Model.User.UserName</h4>
+    </div>
+    <div class="question-item-text">
+        <a class="third-color" asp-controller="Forum" asp-action="ShowQuestion" asp-route-id="@Model.QuestionId">
+            <h3 class="question-item-title">@Model.QuestionTitle</h3>
+        </a>
+        <div class="question-item-stats">
+            <span>
+                <a class="second-color" asp-controller="Course" asp-action="ShowCourse" asp-route-courseId="@Model.CourseId">@Model.CourseName</a>
+            </span>
+            <i class="bi bi-three-dots-vertical vertical-center"></i>
+            @Model.CreateDate.ToLongShamsi()
+            <i class="bi bi-three-dots-vertical vertical-center"></i>
+            @Model.AnswersCount پاسخ
+        </div>
+    </div>
+</div>

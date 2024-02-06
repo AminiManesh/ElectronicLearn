@@ -13,3 +13,5 @@ F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Debug\net7.0\Electr
 F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Debug\net7.0\refint\ElectronicLearn.Core.dll
 F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Debug\net7.0\ElectronicLearn.Core.pdb
 F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Debug\net7.0\ref\ElectronicLearn.Core.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\bin\Debug\net7.0\ElectronicLearn.Core.runtimeconfig.json
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Core\obj\Debug\net7.0\ElectronicLearn.Core.genruntimeconfig.cache

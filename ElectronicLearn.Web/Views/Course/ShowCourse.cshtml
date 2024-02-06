@@ -1,5 +1,6 @@
 ﻿@using ElectronicLearn.Core.Convertors;
 @using System.Security.Claims;
+@using ElectronicLearn.DataLayer.Entities.Course;
 @model ElectronicLearn.DataLayer.Entities.Course.Course;
 @inject ElectronicLearn.Core.Services.Interfaces.ICourseService _courseService
 @{
@@ -21,7 +22,7 @@
     <meta property="og:image" content="/Courses/Image/@Model.CourseImageName">
     <meta property="og:image:url" content="/Courses/Image/@Model.CourseImageName">
     <meta property="og:image:width" content="700">
-    @*<meta property="og:image:height" content="500">*@
+                                    @*<meta property="og:image:height" content="500">*@
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:description" content="آموزش Asp.Net Core  پیشرفته">
     <meta property="og:price:currency" content="IRR">
@@ -46,34 +47,97 @@
                     @Html.Raw(Model.CourseDescription)
                 </p>
 
+                @if (!string.IsNullOrEmpty(Model.DemoFileName))
+                {
+                    <video style="width: 100%;" controls poster="/Courses/Image/@Model.CourseImageName">
+                        <source src="/Courses/Demoes/@Model.DemoFileName" />
+                    </video>
+                }
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    if (IsUserHasCourse)
+                    {
+                        <div id="voteBox"></div>
+                        <div id="voteResult" class="alert alert-warning"></div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info">
+                            <p class="mb-0">
+                                کاربر عزیز جهت رای دادن به این دوره، ابتدا در این دوره ثبت‌نام کنید.
+                            </p>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="alert alert-info">
+                        <p class="mb-0">
+                            کاربر عزیز جهت رای دادن به این دوره، ابتدا در سایت لاگین کنید.
+                        </p>
+                    </div>
+                }
+
+                @if (!IsUserHasCourse)
+                {
+                    <div class="alert alert-info">
+                        <p class="mb-0">پس از ثبت‌نام در این دوره و تایید فاکتور لینک های دانلود برای شما فعال خواهند شد.</p>
+                    </div>
+                }
+
                 <h2> سرفصل های این دوره : </h2>
+
                 <ul>
                     @foreach (var episode in Model.CourseEpisodes)
                     {
-                        <li>
-                            @if (episode.IsFree || IsUserHasCourse)
-                            {
-                                <h3>
-                                    <a href="/DownloadEpisode/@episode.CourseEpisodeId">
+                        <li class="episode-item" id="@episode.CourseEpisodeId">
+                            <div class="episode-item-status">
+                                @if (episode.IsFree || IsUserHasCourse)
+                                {
+                                    <h3>
+                                        <a href="/DownloadEpisode/@episode.CourseEpisodeId">
+                                            @episode.CourseEpisodeTitle
+                                        </a>
+                                    </h3>
+                                }
+                                else
+                                {
+                                    <h3>
                                         @episode.CourseEpisodeTitle
+                                    </h3>
+                                }
+                                @if (episode.IsFree)
+                                {
+                                    <i> رایگان </i>
+                                }
+                                else
+                                {
+                                    <i> نقدی </i>
+                                }
+                                @if (episode.IsFree || IsUserHasCourse)
+                                {
+                                    <a href="/ShowCourse/@Model.CourseId?episodeId=@episode.CourseEpisodeId#@episode.CourseEpisodeId" class="play-episode-online">
+                                        تماشای آنلاین
+                                        <i class="bi bi-play-circle vertical-center"></i>
                                     </a>
-                                </h3>
+                                }
+                                <span class="episode-time">@episode.EpisodeTime</span>
+                            </div>
+
+                            @{
+                                CourseEpisode bagEpisode = new CourseEpisode();
+                                if (ViewBag.episode != null)
+                                {
+                                    bagEpisode = ViewBag.episode as CourseEpisode;
+                                }
                             }
-                            else
+                            @if (bagEpisode != null && bagEpisode.CourseEpisodeId == episode.CourseEpisodeId)
                             {
-                                <h3>
-                                    @episode.CourseEpisodeTitle
-                                </h3>
+                                <video class="mt-3" style="width: 100%;display:block;" controls poster="/Courses/Image/@Model.CourseImageName">
+                                    <source src="@ViewBag.episodeOnlinePath" />
+                                </video>
                             }
-                            @if (episode.IsFree)
-                            {
-                                <i> رایگان </i>
-                            }
-                            else
-                            {
-                                <i> نقدی </i>
-                            }
-                            <span>@episode.EpisodeTime</span>
                         </li>
                     }
                 </ul>
@@ -196,6 +260,15 @@
                 </div>
             }
 
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a class="btn btn-block btn-success w-100" asp-controller="Forum" asp-action="CourseQuestions" asp-route-id="@Model.CourseId">پرسش سوال</a>
+            }
+            else
+            {
+                <div class="alert alert-info">برای پرسش سوال درباره این دوره ابتدا وارد حساب کاربری خود شوید.</div>
+            }
+
         </aside>
     </div>
 </section>
@@ -213,6 +286,29 @@
 
         function CommentPage(pageId) {
             $("#commentList").load("/Course/GetComments/" + @Model.CourseId + "?pageId=" + pageId);
+        }
+
+        $(document).ready(function () {
+            $('#voteBox').load('/Course/CourseVote?courseId=@Model.CourseId');
+        });
+
+        function submitVote(vote) {
+            $.ajax({
+                type: 'post',
+                url: '/Course/SubmitVote',
+                data: { courseId: @Model.CourseId, vote: vote },
+                success: function (response) {
+                    $('#voteResult').fadeOut(300, function () {
+                        $('#voteResult').text(response);
+                        $('#voteResult').fadeIn(300);
+                    });
+
+                    $('#voteBox').fadeOut(300, function () {
+                        $('#voteBox').load('/Course/CourseVote?courseId=@Model.CourseId');
+                        $('#voteBox').fadeIn(300);
+                    });
+                }
+            });
         }
     </script>
 }

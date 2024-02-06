@@ -2,6 +2,9 @@
 using ElectronicLearn.DataLayer.Entities.Course;
 using ElectronicLearn.DataLayer.Entities.User;
 using Microsoft.AspNetCore.Http;
+using SharpCompress.Archives;
+using SharpCompress.Archives.Rar;
+using SharpCompress.Common;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -99,5 +102,28 @@ namespace ElectronicLearn.Core.Tools
                 image.Dispose();
             }
         }
+
+        public static void ExtractFile(string rarPath, string fileName, string extractPath)
+        {
+            if (File.Exists(rarPath))
+            {
+                using (Stream stream = File.OpenRead(rarPath))
+                {
+                    var reader = RarArchive.Open(stream);
+                    foreach (var entry in reader.Entries)
+                    {
+                        if (!entry.IsDirectory && entry.Key.Equals(fileName))
+                        {
+                            if (!Directory.Exists(extractPath))
+                            {
+                                Directory.CreateDirectory(extractPath);
+                            }
+                            entry.WriteToDirectory(extractPath, new ExtractionOptions() { ExtractFullPath = true, Overwrite = true });
+                            break;
+                        }
+                    }
+                }
+            }
+        } 
     }
 }

@@ -42,6 +42,12 @@ namespace ElectronicLearn.Core.Services
         {
             _context.Users.Add(user);
             _context.SaveChanges();
+            var wallet = new Wallet()
+            {
+                UserId = user.UserId,
+                Cash = 0
+            };
+            user.Wallet = wallet;
             return user.UserId;
         }
 
@@ -63,13 +69,7 @@ namespace ElectronicLearn.Core.Services
 
             user.IsActive = true;
             user.ActiveCode = TextGenerator.GenerateUniqeCode();
-            var wallet = new Wallet()
-            {
-                UserId = user.UserId,
-                Cash = 0
-            };
-            user.Wallet = wallet;
-
+            
             _context.SaveChanges();
             return true;
         }
@@ -240,7 +240,16 @@ namespace ElectronicLearn.Core.Services
                 newUser.Avatar = "avatar.jpg";
             }
 
+            
+
             int userId = AddUser(newUser);
+
+            var wallet = new Wallet()
+            {
+                UserId = newUser.UserId,
+                Cash = 0
+            };
+            newUser.Wallet = wallet;
 
             if (user.IsActive)
             {

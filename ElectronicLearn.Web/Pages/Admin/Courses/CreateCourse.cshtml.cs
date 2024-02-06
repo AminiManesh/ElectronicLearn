@@ -43,8 +43,13 @@ namespace ElectronicLearn.Web.Pages.Admin.Courses
         {
             ModelState.ClearValidationState("Course.OrderItems");
             ModelState.ClearValidationState("Course.UsersCourses");
+            ModelState.ClearValidationState("Course.CourseVotes");
+            ModelState.ClearValidationState("Course.Questions");
             ModelState.MarkFieldValid("Course.OrderItems");
             ModelState.MarkFieldValid("Course.UsersCourses");
+            ModelState.MarkFieldValid("Course.CourseVotes");
+            ModelState.MarkFieldValid("Course.Questions");
+
             if (!ModelState.IsValid)
                 return Page();
 

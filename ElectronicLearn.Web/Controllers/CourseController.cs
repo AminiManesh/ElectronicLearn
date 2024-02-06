@@ -1,5 +1,7 @@
 ﻿using ElectronicLearn.Core.Services.Interfaces;
+using ElectronicLearn.Core.Tools;
 using ElectronicLearn.DataLayer.Entities.Course;
+using ElectronicLearn.DataLayer.Entities.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -30,9 +32,61 @@ namespace ElectronicLearn.Web.Controllers
         }
 
         [Route("ShowCourse/{courseId}")]
-        public IActionResult ShowCourse(int courseId)
+        public IActionResult ShowCourse(int courseId, int episodeId = 0)
         {
+            var userId = 0;
+            if (User.Identity.IsAuthenticated)
+            {
+                userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier.ToString()));
+            }
+
             var course = _courseService.GetCourseDetails(courseId);
+            if (course == null)
+            {
+                return NotFound();
+            }
+
+            if (episodeId != 0)
+            {
+                if (!course.CourseEpisodes.Any(e => e.CourseEpisodeId == episodeId))
+                {
+                    return NotFound();
+                }
+
+                var episode = course.CourseEpisodes.First(e => e.CourseEpisodeId == episodeId);
+                string episodeOnlinePath = System.IO.Path.Combine(Directory.GetCurrentDirectory(),
+                    $"wwwroot/Courses/CourseOnline/{courseId}",
+                    episode.EpisodeFileName.Replace(".rar", ".mp4"));
+                if (!System.IO.File.Exists(episodeOnlinePath))
+                {
+                    string rarPath = System.IO.Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/Courses/Episodes/{courseId}/{episode.EpisodeFileName}");
+                    string videoName = episode.EpisodeFileName.Replace(".rar", ".mp4");
+                    string extractPath = System.IO.Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/Courses/CourseOnline/{courseId}");
+                    FileTools.ExtractFile(rarPath, videoName, extractPath);
+                }
+
+                if (User.Identity.IsAuthenticated)
+                {
+                    if (!episode.IsFree)
+                    {
+                        if (!_courseService.IsUserHasCourse(userId, courseId))
+                        {
+                            return NotFound();
+                        }
+                    }
+
+                    ViewBag.Episode = episode;
+                    ViewBag.episodeOnlinePath = episodeOnlinePath.Split("wwwroot")[1];
+                }
+                else
+                {
+                    if (episode.IsFree)
+                    {
+                        ViewBag.Episode = episode;
+                        ViewBag.episodeOnlinePath = episodeOnlinePath.Split("wwwroot")[1];
+                    }
+                }
+            }
             return View(course);
         }
 
@@ -85,6 +139,35 @@ namespace ElectronicLearn.Web.Controllers
         public IActionResult GetComments(int id, int pageId = 1)
         {
             return View(_courseService.GetCourseComments(id, pageId));
+        }
+
+        public IActionResult CourseVote(int courseId)
+        {
+            var model = _courseService.GetCourseVotes(courseId);
+            return PartialView(model);
+        }
+
+        [Authorize]
+        public IActionResult SubmitVote(int courseId, bool vote)
+        {
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
+            int response = _courseService.SumbitVote(userId, courseId, vote);
+            var result = "";
+            switch (response)
+            {
+                case 0:
+                    result = "رای شما با موفقیت ثبت شد.";
+                    break;
+                case 1:
+                    result = "رای شما با موفقیت تغییر کرد.";
+                    break;
+                case 2:
+                    result = "شما قبلا همین رای را به این دوره داده‌اید.";
+                    break;
+                default:
+                    break;
+            }
+            return Json(result);
         }
     }
 }

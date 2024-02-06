@@ -19,6 +19,10 @@ namespace ElectronicLearn.Core.Services.Interfaces
         List<SelectListItem> GetAllSubGroupsForManageCourse(int parentId);
         List<SelectListItem> GetAllCourseStatuses();
         List<SelectListItem> GetAllCourseLevels();
+
+        void AddGroup(CourseGroup group);
+        void UpdateGroup(CourseGroup group);
+        CourseGroup GetGroupById(int groupId);
         #endregion
 
 
@@ -31,6 +35,9 @@ namespace ElectronicLearn.Core.Services.Interfaces
         void UpdateCourse(Course course, IFormFile demoVideo, IFormFile courseImage);
         Tuple<List<CourseListItemViewModel>, int> GetCourses(int pageId = 1, string filter = "", string priceType = "all", string orderBy = "createDate", int startPrice = 0, int endPrice = 0, List<int> selectedGroups = null, int take = 0);
         List<CourseListItemViewModel> GetPopularCourses();
+        int SumbitVote(int userId, int courseId, bool userVote);
+        Tuple<int, int> GetCourseVotes(int courseId);
+        string GetCourseNameById(int courseId);
         #endregion
 
 

@@ -1,4 +1,5 @@
-﻿using ElectronicLearn.Core.Services.Interfaces;
+﻿using ElectronicLearn.Core.Security;
+using ElectronicLearn.Core.Services.Interfaces;
 using ElectronicLearn.DataLayer.Entities.Course;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ElectronicLearn.Web.Pages.Admin.Courses
 {
+    [PermissionChecker(12)]
     public class EditCourseModel : PageModel
     {
         private readonly ICourseService _courseService;
@@ -52,14 +54,18 @@ namespace ElectronicLearn.Web.Pages.Admin.Courses
             ViewData["Statuses"] = new SelectList(statuses, "Value", "Text", Course.CourseStatusId);
         }
 
-        public IActionResult OnPost(IFormFile? demoVideo, IFormFile imgCourseThumb)
+        public IActionResult OnPost(IFormFile? demoVideo, IFormFile? imgCourseThumb)
         {
             ModelState.ClearValidationState("Course.OrderItems");
             ModelState.ClearValidationState("Course.UsersCourses");
             ModelState.ClearValidationState("Course.CourseComments");
+            ModelState.ClearValidationState("Course.CourseVotes");
+            ModelState.ClearValidationState("Course.Questions");
             ModelState.MarkFieldValid("Course.OrderItems");
             ModelState.MarkFieldValid("Course.UsersCourses");
             ModelState.MarkFieldValid("Course.CourseComments");
+            ModelState.MarkFieldValid("Course.CourseVotes");
+            ModelState.MarkFieldValid("Course.Questions");
             if (!ModelState.IsValid)
             {
                 return Page();

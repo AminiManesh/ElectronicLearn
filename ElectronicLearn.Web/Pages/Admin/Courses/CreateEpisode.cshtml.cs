@@ -1,10 +1,12 @@
 using ElectronicLearn.Core.DTOs;
+using ElectronicLearn.Core.Security;
 using ElectronicLearn.Core.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ElectronicLearn.Web.Pages.Admin.Courses
 {
+    [PermissionChecker(14)]
     public class CreateEpisodeModel : PageModel
     {
         private readonly ICourseService _courseService;

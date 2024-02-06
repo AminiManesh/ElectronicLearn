@@ -1,0 +1,134 @@
+﻿@using ElectronicLearn.Core.Convertors;
+@using ElectronicLearn.Core.Services.Interfaces;
+@using ElectronicLearn.DataLayer.Entities.Question;
+@using System.Security.Claims;
+@inject ICourseService _courseService;
+@model Question
+@{
+    ViewData["Title"] = Model.QuestionTitle;
+    var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier.ToString()));
+    bool isUserHasCourse = _courseService.IsUserHasCourse(userId, Model.CourseId);
+}
+
+<section class="term-content">
+    <header><h1> @Model.QuestionTitle </h1></header>
+    <div class="row">
+
+        <div class="col-md-8 col-sm-12 col-xs-12 pull-left">
+            <section class="term-description">
+                <span class="badge bg-danger fs-6 mb-4">@Model.CreateDate.ToLongShamsi()</span>
+                @Html.Raw(Model.QuestionBody)
+            </section>
+
+            <section class="user-comments">
+                <header><h3> پاسخ‌های این سوال </h3></header>
+                <div class="inner">
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <h4 class="mb-2">به این سوال پاسخ دهید.</h4>
+                        <form asp-controller="Forum" asp-action="PostAnswer">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <input type="hidden" name="Answer.QuestionId" value="@Model.QuestionId" />
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="input-group mb-3">
+                                        <textarea class="form-control w-100" id="Answer.AnswerBody" name="Answer.AnswerBody" placeholder="متن پاسخ"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <button type="submit" class="btn btn-success"> ثبت پاسخ </button>
+                                </div>
+                            </div>
+                        </form>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info">
+                            برای ثبت پاسخ می‌بایست وارد حساب کاربری خود شوید.
+                            <a asp-area="" asp-controller="Account" asp-action="Login">ورود به حساب کاربری</a>
+                        </div>
+                    }
+
+                    <div class="comment-list" id="commentList">
+                        @foreach (var answer in Model.Answers)
+                        {
+                            <div class="comment-row">
+                                <img src="/img/UserAvatars/@answer.User.Avatar">
+                                <div class="left-col">
+                                    <h3> @answer.User.UserName </h3>
+                                    <span class="d-inline-block">@answer.CreateDate.ToLongShamsi()</span>
+                                    @if (answer.IsCorrect == true)
+                                    {
+                                        <span class="text-white bg-primary px-1 rounded-2 float-end">پاسخ صحیح</span>
+                                    }
+                                    <p>
+                                        @Html.Raw(answer.AnswerBody)
+                                    </p>
+                                    @if (User.Identity.IsAuthenticated && Model.UserId == userId)
+                                    {
+                                        if (!answer.IsCorrect)
+                                        {
+                                            <p class="text-end">
+                                                <a href="/Forum/ConfirmAnswer/@Model.QuestionId?answerId=@answer.AnswerId&isCorrect=@true" class="btn btn-success w-auto">تایید پاسخ</a>
+                                            </p>
+                                        }
+                                        else
+                                        {
+                                            <p class="text-end">
+                                                <a href="/Forum/ConfirmAnswer/@Model.QuestionId?answerId=@answer.AnswerId&isCorrect=@false" class="btn btn-danger w-auto">عدم تایید پاسخ</a>
+                                            </p>
+                                        }
+
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="col-md-4 col-sm-12 col-xs-12 pull-right">
+            <article class="teacher-info">
+                <img src="/img/UserAvatars/@Model.User.Avatar">
+                <h2> کاربر : @Model.User.UserName </h2>
+                <p>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است استفاده از طراحان گرافیک است ...
+                </p>
+            </article>
+
+        </aside>
+    </div>
+</section>
+
+@section Scripts{
+    <script src="/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+    <script>
+
+        CKEDITOR.replace('Answer.AnswerBody', {
+            customConfig: '/js/Config.js'
+        });
+
+        function submitVote(vote) {
+            $.ajax({
+                type: 'post',
+                url: '/Course/SubmitVote',
+                data: { courseId: @Model.CourseId, vote: vote },
+                success: function (response) {
+                    $('#voteResult').fadeOut(300, function () {
+                        $('#voteResult').text(response);
+                        $('#voteResult').fadeIn(300);
+                    });
+
+                    $('#voteBox').fadeOut(300, function () {
+                        $('#voteBox').load('/Course/CourseVote?courseId=@Model.CourseId');
+                        $('#voteBox').fadeIn(300);
+                    });
+                }
+            });
+        }
+    </script>
+}

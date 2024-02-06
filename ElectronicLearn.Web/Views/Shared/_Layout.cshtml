@@ -1,6 +1,8 @@
 ﻿@using System.Security.Claims;
 <!DOCTYPE html>
 <html class="no-js" dir="rtl" lang="fa-IR">
+
+
 <head>
     <partial name="_MetaTags" />
     <title>الکترونیک لرن | @ViewData["Title"]</title>
@@ -9,6 +11,8 @@
     @RenderSection("Styles", false)
     <script src="/lib/jquery/jquery.min.js"></script>
 </head>
+
+
 <body>
     <script src="/js/modernizr-custom.js"></script>
 
@@ -24,6 +28,7 @@
                                 <a href=""> همکاری در فروش </a>
                                 <a href=""> درباره ما </a>
                                 <a href=""> تماس با ما </a>
+                                <a href="/Forum"> انجمن </a>
                             </li>
                         </ul>
                     </div>
@@ -68,6 +73,7 @@
     <partial name="_Footer" />
     <!-- /footer -->
 
+    <script src="/lib/jqueryui/jquery-ui.min.js"></script>
     <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/persianumber.min.js"></script>
     @RenderSection("Scripts", required: false)

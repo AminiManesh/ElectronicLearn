@@ -225,6 +225,35 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.ToTable("CourseStatuses");
                 });
 
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Course.CourseVote", b =>
+                {
+                    b.Property<int>("VoteId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VoteId"));
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Vote")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("VoteDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("VoteId");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CourseVotes");
+                });
+
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Course.UserCourse", b =>
                 {
                     b.Property<int>("UC_Id")
@@ -378,6 +407,83 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("RolePermissions");
+                });
+
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Question.Answer", b =>
+                {
+                    b.Property<int>("AnswerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnswerId"));
+
+                    b.Property<string>("AnswerBody")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsCorrect")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AnswerId");
+
+                    b.HasIndex("QuestionId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Answers");
+                });
+
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Question.Question", b =>
+                {
+                    b.Property<int>("QuestionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("QuestionId"));
+
+                    b.Property<DateTime?>("CloseDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsClosed")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("QuestionBody")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QuestionTitle")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("QuestionId");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Questions");
                 });
 
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.User.Role", b =>
@@ -650,6 +756,25 @@ namespace ElectronicLearn.DataLayer.Migrations
                         .HasForeignKey("ParentId");
                 });
 
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Course.CourseVote", b =>
+                {
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.Course.Course", "Course")
+                        .WithMany("CourseVotes")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.User.User", "User")
+                        .WithMany("CourseVotes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Course.UserCourse", b =>
                 {
                     b.HasOne("ElectronicLearn.DataLayer.Entities.Course.Course", "Course")
@@ -725,6 +850,44 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.Navigation("Role");
                 });
 
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Question.Answer", b =>
+                {
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.Question.Question", "Question")
+                        .WithMany("Answers")
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.User.User", "User")
+                        .WithMany("Answers")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Question");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Question.Question", b =>
+                {
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.Course.Course", "Course")
+                        .WithMany("Questions")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ElectronicLearn.DataLayer.Entities.User.User", "User")
+                        .WithMany("Questions")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.User.User", b =>
                 {
                     b.HasOne("ElectronicLearn.DataLayer.Entities.Wallet.Wallet", "Wallet")
@@ -797,7 +960,11 @@ namespace ElectronicLearn.DataLayer.Migrations
 
                     b.Navigation("CourseEpisodes");
 
+                    b.Navigation("CourseVotes");
+
                     b.Navigation("OrderItems");
+
+                    b.Navigation("Questions");
 
                     b.Navigation("UsersCourses");
                 });
@@ -838,6 +1005,11 @@ namespace ElectronicLearn.DataLayer.Migrations
                     b.Navigation("RolePermissions");
                 });
 
+            modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.Question.Question", b =>
+                {
+                    b.Navigation("Answers");
+                });
+
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.User.Role", b =>
                 {
                     b.Navigation("RolePermissions");
@@ -847,11 +1019,17 @@ namespace ElectronicLearn.DataLayer.Migrations
 
             modelBuilder.Entity("ElectronicLearn.DataLayer.Entities.User.User", b =>
                 {
+                    b.Navigation("Answers");
+
                     b.Navigation("CourseComments");
+
+                    b.Navigation("CourseVotes");
 
                     b.Navigation("Courses");
 
                     b.Navigation("Orders");
+
+                    b.Navigation("Questions");
 
                     b.Navigation("UserRoles");
 

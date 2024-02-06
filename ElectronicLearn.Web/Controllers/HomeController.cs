@@ -17,7 +17,7 @@ namespace ElectronicLearn.Web.Controllers
         public IActionResult Index()
         {
             ViewBag.PopularCourses = _courseService.GetPopularCourses();
-            return View(_courseService.GetCourses());
+            return View(_courseService.GetCourses().Item1);
         }
 
         [Route("ChargeWallet/{id}")]

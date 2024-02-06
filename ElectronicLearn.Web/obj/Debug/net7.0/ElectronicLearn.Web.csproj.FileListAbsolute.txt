@@ -270,3 +270,9 @@ F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\obj\Debug\net7.0\Electro
 F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\obj\Debug\net7.0\ElectronicLearn.Web.genruntimeconfig.cache
 F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\obj\Debug\net7.0\ref\ElectronicLearn.Web.dll
 F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net7.0\web.config
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net7.0\SharpCompress.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net7.0\ZstdSharp.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net7.0\AngleSharp.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net7.0\AngleSharp.Css.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net7.0\HtmlSanitizer.dll
+F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net7.0\System.Collections.Immutable.dll

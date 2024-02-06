@@ -1,4 +1,5 @@
 ElectronicLearn.Core/Senders/SendEmail.cs
 ElectronicLearn.Web/wwwroot/Courses/Episodes
+ElectronicLearn.Web/wwwroot/Courses/CourseOnline
 ElectronicLearn.Web/wwwroot/Courses/Demoes
 ElectronicLearn.Web/wwwroot/img/UserAvatars

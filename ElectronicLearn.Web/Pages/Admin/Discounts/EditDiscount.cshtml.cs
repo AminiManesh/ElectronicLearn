@@ -1,3 +1,4 @@
+using ElectronicLearn.Core.Security;
 using ElectronicLearn.Core.Services.Interfaces;
 using ElectronicLearn.DataLayer.Entities.Order;
 using Microsoft.AspNetCore.Mvc;
@@ -5,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ElectronicLearn.Web.Pages.Admin.Discounts
 {
+    [PermissionChecker(20)]
     public class EditDiscountModel : PageModel
     {
         private readonly IOrderService _orderService;

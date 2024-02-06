@@ -20,7 +20,7 @@ namespace ElectronicLearn.Core.Convertors
         {
             var persian = new PersianCalendar();
             var shamsiDate = $"{persian.GetYear(date)}/{persian.GetMonth(date).ToString("00")}/{persian.GetDayOfMonth(date).ToString("00")}";
-            var time = $"{persian.GetHour(date).ToString("00")}:{persian.GetMinute(date).ToString("00")}:{persian.GetSecond(date).ToString("00")} {date.ToString("tt")}";
+            var time = date.ToString("hh:mm:ss tt", new CultureInfo("Fa-ir"));
 
             return $"{shamsiDate} - {time}";
         }

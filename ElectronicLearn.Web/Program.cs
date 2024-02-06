@@ -2,6 +2,7 @@ using ElectronicLearn.Core.Convertors;
 using ElectronicLearn.Core.Services;
 using ElectronicLearn.Core.Services.Interfaces;
 using ElectronicLearn.DataLayer.Context;
+using ElectronicLearn.Web.Middlewares;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
@@ -30,6 +31,7 @@ builder.Services.AddTransient<IViewRenderService, RenderViewToString>();
 builder.Services.AddTransient<IPermissionService, PermissionService>();
 builder.Services.AddTransient<ICourseService, CourseService>();
 builder.Services.AddTransient<IOrderService, OrderService>();
+builder.Services.AddTransient<IForumService, ForumService>();
 #endregion
 
 #region Authentication
@@ -61,11 +63,18 @@ else
     app.UseDeveloperExceptionPage();
 }
 
+app.UseMiddleware<AccessRestrictionMiddleware>();
+app.UseMiddleware<NotFoundMiddleware>();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+
+//app.Use(async (context, next) => {
+
+//});
 
 app.MapRazorPages();
 app.MapControllerRoute(

@@ -1,6 +1,7 @@
 ﻿using ElectronicLearn.DataLayer.Entities.Course;
 using ElectronicLearn.DataLayer.Entities.Order;
 using ElectronicLearn.DataLayer.Entities.Permission;
+using ElectronicLearn.DataLayer.Entities.Question;
 using ElectronicLearn.DataLayer.Entities.User;
 using ElectronicLearn.DataLayer.Entities.Wallet;
 using Microsoft.EntityFrameworkCore;
@@ -44,6 +45,7 @@ namespace ElectronicLearn.DataLayer.Context
         public DbSet<CourseEpisode> CourseEpisodes { get; set; }
         public DbSet<UserCourse> UsersCourses { get; set; }
         public DbSet<CourseComment> CourseComments { get; set; }
+        public DbSet<CourseVote> CourseVotes { get; set; }
         #endregion
 
         #region Order
@@ -54,6 +56,11 @@ namespace ElectronicLearn.DataLayer.Context
         #region Discount
         public DbSet<Discount> Discounts { get; set; }
         public DbSet<UserDiscount> UsersDiscounts { get; set; }
+        #endregion
+
+        #region Question
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<Answer> Answers { get; set; }
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
