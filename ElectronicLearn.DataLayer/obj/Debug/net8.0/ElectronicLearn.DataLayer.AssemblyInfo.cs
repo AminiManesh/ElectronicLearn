@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElectronicLearn.DataLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b493e68360025199c5b6bfbe2f3dcadd74a9379e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c14765f5387bb08403d3e096f2a2241b5f7d4cb9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElectronicLearn.DataLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElectronicLearn.DataLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

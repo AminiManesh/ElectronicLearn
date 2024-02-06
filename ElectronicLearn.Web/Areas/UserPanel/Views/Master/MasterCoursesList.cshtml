@@ -1,0 +1,53 @@
+﻿@using ElectronicLearn.Core.Convertors
+@model List<ElectronicLearn.DataLayer.Entities.Course.Course>
+@{
+    ViewData["Title"] = "لیست دوره ها";
+}
+
+
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" asp-area="">الکترونیک لرن</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+    </ul>
+</nav>
+
+<div class="user-account">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <partial name="_UserPanelSidebarPartial" />
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+            <section class="user-account-content">
+                <header><h1> @ViewData["Title"] </h1></header>
+                <div class="inner">
+                    <table class="table table-bordered table-striped mt-4">
+                        <thead class="table-primary">
+                            <tr>
+                                <td>عنوان</td>
+                                <td>وضعیت</td>
+                                <td>تعداد قسمت‌ها</td>
+                                <td>دستورات</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var course in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @course.CourseTitle
+                                    </td>
+                                    <td>@course.CourseStatus.CourseStatusTitle</td>
+                                    <td dir="rtl">@course.CourseEpisodes.Count()</td>
+                                    <td>
+                                        <a asp-area="UserPanel" asp-controller="Master" asp-action="EpisodesList" asp-route-courseId="@course.CourseId" class="btn btn-info text-light btn-sm">مدیریت قسمت‌ها</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

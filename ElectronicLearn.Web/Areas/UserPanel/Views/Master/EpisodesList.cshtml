@@ -1,0 +1,69 @@
+﻿@using ElectronicLearn.Core.DTOs
+@model AdminEpisodeListViewModel
+@{
+    ViewData["Title"] = $"لیست قسمت‌های {@Model.CourseName}";
+}
+
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" asp-area="">الکترونیک لرن</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+    </ul>
+</nav>
+
+<div class="user-account">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <partial name="_UserPanelSidebarPartial" />
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+            <section class="user-account-content">
+                <header class="d-flex justify-content-between align-items-center">
+                    <h1> @ViewData["Title"] </h1>
+                    <a asp-area="UserPanel" asp-controller="Master" asp-action="InsertEpisode" asp-route-courseId="@Model.CourseId" class="btn btn-success"> افزودن قسمت جدید </a>
+                </header>
+                <div class="inner">
+                    <table class="table table-bordered table-striped mt-4">
+                        <thead class="table-primary">
+                            <tr>
+                                <td>عنوان</td>
+                                <td>مدت زمان</td>
+                                <td>قیمت</td>
+                                <td>دستورات</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var episode in Model.EpisodeList)
+                            {
+                                <tr>
+                                    <td>
+                                        @episode.CourseEpisodeTitle
+                                    </td>
+                                    <td>@episode.EpisodeTime</td>
+                                    <td dir="rtl">
+                                        @if (episode.IsFree)
+                                        {
+                                            <span class="text-success">رایگان</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-primary">نقدی</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a asp-area="UserPanel" asp-controller="Master" class="btn btn-info text-light btn-sm">‌ویرایش</a>
+                                        <a asp-area="UserPanel" asp-controller="Master" asp-action="DownloadEpisode" asp-route-episodeId="@episode.CourseEpisodeId" class="btn btn-primary text-light btn-sm">
+                                            دانلود 
+                                           <i class="bi bi-download"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+

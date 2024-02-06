@@ -13742,11 +13742,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\ElectronicLearn.Core.csproj",
+      "projectUniqueName": "C:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\ElectronicLearn.Core.csproj",
       "projectName": "ElectronicLearn.Core",
-      "projectPath": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\ElectronicLearn.Core.csproj",
+      "projectPath": "C:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\ElectronicLearn.Core.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\obj\\",
+      "outputPath": "C:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -13768,8 +13768,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj": {
-              "projectPath": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj"
+            "C:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj": {
+              "projectPath": "C:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj"
             }
           }
         }

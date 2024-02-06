@@ -1248,6 +1248,86 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\19\معرفی دوره asp.rar))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\ElectronicLearn.com - Flutter - Personnel-Management-project-source-code-in-C-sharp-sourceiran-com.zip))">
+      <SourceType>Package</SourceType>
+      <SourceId>ElectronicLearn.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ElectronicLearn.Web</BasePath>
+      <RelativePath>Courses/Episodes/20/ElectronicLearn.com - Flutter - Personnel-Management-project-source-code-in-C-sharp-sourceiran-com.zip</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\ElectronicLearn.com - Flutter - Personnel-Management-project-source-code-in-C-sharp-sourceiran-com.zip))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\ElectronicLearn.com - Flutter - php-8.2.6-nts-Win32-vs16-x64.zip))">
+      <SourceType>Package</SourceType>
+      <SourceId>ElectronicLearn.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ElectronicLearn.Web</BasePath>
+      <RelativePath>Courses/Episodes/20/ElectronicLearn.com - Flutter - php-8.2.6-nts-Win32-vs16-x64.zip</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\ElectronicLearn.com - Flutter - php-8.2.6-nts-Win32-vs16-x64.zip))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\ElectronicLearn.com - Flutter - Portfolios.rar))">
+      <SourceType>Package</SourceType>
+      <SourceId>ElectronicLearn.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ElectronicLearn.Web</BasePath>
+      <RelativePath>Courses/Episodes/20/ElectronicLearn.com - Flutter - Portfolios.rar</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\ElectronicLearn.com - Flutter - Portfolios.rar))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\example.mp4))">
+      <SourceType>Package</SourceType>
+      <SourceId>ElectronicLearn.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ElectronicLearn.Web</BasePath>
+      <RelativePath>Courses/Episodes/20/example.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\example.mp4))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\Flutter - Personnel-Management-project-source-code-in-C-sharp-sourceiran-com.zip))">
+      <SourceType>Package</SourceType>
+      <SourceId>ElectronicLearn.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ElectronicLearn.Web</BasePath>
+      <RelativePath>Courses/Episodes/20/Flutter - Personnel-Management-project-source-code-in-C-sharp-sourceiran-com.zip</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\Flutter - Personnel-Management-project-source-code-in-C-sharp-sourceiran-com.zip))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Courses\Episodes\20\معرفی دوره asp.rar))">
       <SourceType>Package</SourceType>
       <SourceId>ElectronicLearn.Web</SourceId>

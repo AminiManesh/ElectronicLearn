@@ -47,7 +47,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 #region File Upload
 builder.Services.Configure<FormOptions>(option =>
 {
-    option.MultipartBodyLengthLimit = 60000000;
+    option.MultipartBodyLengthLimit = 5242880000;
 });
 #endregion
 

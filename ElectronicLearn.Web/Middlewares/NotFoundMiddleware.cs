@@ -12,7 +12,7 @@
         {
             await _next(context);
 
-            if (context.Response.StatusCode == 404 && !context.Response.HasStarted)
+            if (context.Response.StatusCode == 404)
             {
                 context.Request.Path = "/Error/404";
                 await _next(context);

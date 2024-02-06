@@ -49,6 +49,20 @@ namespace ElectronicLearn.Core.Tools
             }
         }
 
+        public static void SaveFileWithCustomName(IFormFile file, string fileName, string saveFolderPath, bool deletePreviousFile = false, string prevFileName = "")
+        {
+            if (deletePreviousFile)
+            {
+                DeletePreviousFile(saveFolderPath, prevFileName);
+            }
+
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), saveFolderPath, fileName);
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                file.CopyTo(stream);
+            }
+        }
+
         // Check the file is exists or not
         public static bool IsFileExists(IFormFile file, string saveFolderPath)
         {
@@ -124,6 +138,6 @@ namespace ElectronicLearn.Core.Tools
                     }
                 }
             }
-        } 
+        }
     }
 }

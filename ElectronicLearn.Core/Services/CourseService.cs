@@ -176,6 +176,14 @@ namespace ElectronicLearn.Core.Services
                 }).ToList();
         }
 
+        public List<Course> GetAllMasterCourses(int masterId)
+        {
+            return _context.Courses
+                .Include(c => c.CourseStatus)
+                .Include(c => c.CourseEpisodes)
+                .Where(c => c.TeacherId == masterId).ToList();
+        }
+
         public List<CourseGroup> GetAllParentGroups()
         {
             return _context.CourseGroups.Where(g => g.ParentId == null).ToList();
@@ -382,15 +390,41 @@ namespace ElectronicLearn.Core.Services
                 }).ToList();
         }
 
+        public bool IsCourseIdExists(int courseId)
+        {
+            bool result = _context.Courses.Any(c => c.CourseId == courseId);
+            return result;
+        }
+
         // Check the file is exits or not
         public bool IsFileExists(IFormFile file, string folderPath)
         {
             return FileTools.IsFileExists(file, folderPath);
         }
 
+        public bool IsTeacherOfCourse(int userId, int courseId)
+        {
+            var teacherId = _context.Courses.Find(courseId).TeacherId;
+            return userId == teacherId;
+        }
+
         public bool IsUserHasCourse(int userId, int courseId)
         {
             return _context.UsersCourses.Any(uc => uc.UserId == userId && uc.CourseId == courseId);
+        }
+
+        public void MasterAddEpisode(InsertEpisodeViewModel episode)
+        {
+            var CourseEpisode = new CourseEpisode();
+            CourseEpisode.CourseId = episode.CourseId;
+            CourseEpisode.CourseEpisodeTitle = episode.CourseEpisodeTitle;
+            CourseEpisode.IsFree = episode.IsFree;
+            CourseEpisode.EpisodeTime = episode.EpisodeTime;
+            CourseEpisode.EpisodeFileName = episode.EpisodeFileName;
+
+            _context.Add(CourseEpisode);
+            _context.Courses.Find(episode.CourseId).UpdateDate = DateTime.Now;
+            _context.SaveChanges();
         }
 
         public int SumbitVote(int userId, int courseId, bool userVote)

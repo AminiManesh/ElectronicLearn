@@ -552,3 +552,12 @@ F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\obj\Debug\net8.0\refint\
 F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\obj\Debug\net8.0\ElectronicLearn.Web.pdb
 F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\obj\Debug\net8.0\ElectronicLearn.Web.genruntimeconfig.cache
 F:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\obj\Debug\net8.0\ref\ElectronicLearn.Web.dll
+C:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.dll
+C:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
+C:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+C:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\ProgrammingFiles\ElectronicLearn\ElectronicLearn.Web\bin\Debug\net8.0\Microsoft.JSInterop.dll

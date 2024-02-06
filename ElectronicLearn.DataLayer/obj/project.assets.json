@@ -7705,11 +7705,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj",
+      "projectUniqueName": "C:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj",
       "projectName": "ElectronicLearn.DataLayer",
-      "projectPath": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj",
+      "projectPath": "C:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\ElectronicLearn.DataLayer.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "F:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\obj\\",
+      "outputPath": "C:\\ProgrammingFiles\\ElectronicLearn\\ElectronicLearn.DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

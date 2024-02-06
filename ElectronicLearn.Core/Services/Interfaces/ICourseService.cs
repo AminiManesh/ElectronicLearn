@@ -28,6 +28,8 @@ namespace ElectronicLearn.Core.Services.Interfaces
 
         #region Course
         bool IsUserHasCourse(int userId, int courseId);
+        bool IsTeacherOfCourse(int userId, int courseId);
+        bool IsCourseIdExists(int courseId);
         AdminCourseListViewModel GetAllCoursesForAdmin(int pageId = 1, int groupId = 0, int subGroupId = 0, string courseName = "");
         int AddCourse(Course course, IFormFile demoVideo, IFormFile courseImage);
         Course GetCourseById(int courseId);
@@ -38,6 +40,7 @@ namespace ElectronicLearn.Core.Services.Interfaces
         int SumbitVote(int userId, int courseId, bool userVote);
         Tuple<int, int> GetCourseVotes(int courseId);
         string GetCourseNameById(int courseId);
+        List<Course> GetAllMasterCourses(int masterId);
         #endregion
 
 
@@ -47,6 +50,7 @@ namespace ElectronicLearn.Core.Services.Interfaces
         AdminEpisodeViewModel GetEpisodeForEdit(int episodeId);
         CourseEpisode GetEpisodeById(int episodeId);
         void AddEpisode(AdminEpisodeViewModel episode);
+        void MasterAddEpisode(InsertEpisodeViewModel episode);
         void UpdateEpisode(AdminEpisodeViewModel episode);
         #endregion
 

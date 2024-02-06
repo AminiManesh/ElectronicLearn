@@ -49,6 +49,17 @@
                                                         {
                                                             <li>
                                                                 <input type="checkbox" name="selectedPermissions" value="@sub2.PermissionId" @((selectedPermissions.Any(s => s == sub2.PermissionId)) ? "checked": "") /> @sub2.PermissionTitle
+                                                                @if (permissions.Any(p => p.ParentId == sub2.PermissionId))
+                                                                {
+                                                                    <ul>
+                                                                        @foreach (var sub3 in permissions.Where(p => p.ParentId == sub2.PermissionId).ToList())
+                                                                        {
+                                                                            <li>
+                                                                                <input type="checkbox" name="selectedPermissions" value="@sub3.PermissionId" @((selectedPermissions.Any(s => s == sub3.PermissionId)) ? "checked" : "") /> @sub3.PermissionTitle
+                                                                            </li>
+                                                                        }
+                                                                    </ul>
+                                                                }
                                                             </li>
                                                         }
                                                     </ul>

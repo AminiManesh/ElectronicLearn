@@ -2,9 +2,11 @@
 @using ElectronicLearn.Core.Services.Interfaces;
 @using System.Security.Claims;
 @inject IUserService _userService
+@inject IPermissionService _permissionService;
 
 @{
-    var user = _userService.GetUserPanelSidebarInformation(int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString()));
+    var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier).ToString());
+    var user = _userService.GetUserPanelSidebarInformation(userId);
 }
 
 <aside>
@@ -33,4 +35,16 @@
             </ul>
         </div>
     </section>
+
+    @if (_permissionService.CkeckPermission(userId, 1014))
+    {
+        <section>
+            <header><h3> پنل مدرس </h3></header>
+            <div class="inner">
+                <ul>
+                    <li><a asp-area="UserPanel" asp-controller="Master" asp-action="MasterCoursesList"> مدیریت دوره‌ها </a></li>
+                </ul>
+            </div>
+        </section>
+    }
 </aside>
